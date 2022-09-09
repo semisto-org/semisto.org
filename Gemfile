@@ -90,5 +90,4 @@ gem "responders", github: "heartcombo/responders", branch: "main"
 gem 'gettext_i18n_rails'
 gem 'gettext', '>=3.0.2', :require => false
 gem 'ruby_parser', :require => false, :group => :development
-
-gem "tailwindcss-rails", "~> 2.0"
+gem "slim-rails"

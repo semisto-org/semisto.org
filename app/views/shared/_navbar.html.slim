@@ -1,0 +1,93 @@
+- if current_user != true_user
+  .bg-blue-100.border-t.border-b.border-blue-500.text-blue-700.px-4.py-3(role="alert")
+    p.font-bold You're logged in as <b>#{current_user.name} (#{current_user.email})
+    p.text-sm
+      = link_to stop_impersonating_madmin_impersonates_path, method: :post do
+        = icon("fas", "times")
+        => _("Logout")
+
+nav.bg-gray-800
+  .mx-auto.max-w-7xl.px-2.sm:px-6.lg:px-8
+    .relative.flex.h-16.items-center.justify-between
+      .absolute.inset-y-0.left-0.flex.items-center.sm:hidden
+        /! Mobile menu button
+        button.inline-flex.items-center.justify-center.rounded-md.p-2.text-gray-400.hover:bg-gray-700.hover:text-white.focus:outline-none.focus:ring-2.focus:ring-inset.focus:ring-white aria-controls="mobile-menu" aria-expanded="false" type="button"
+          span.sr-only = _("Open main menu")
+          /!
+            | Icon when menu is closed.
+
+            | Heroicon name: outline/bars-3
+
+            | Menu open: "hidden", Menu closed: "block"
+          svg.block.h-6.w-6 aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" viewbox=("0 0 24 24") xmlns="http://www.w3.org/2000/svg"
+            path d=("M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5") stroke-linecap="round" stroke-linejoin="round" /
+          /!
+            | Icon when menu is open.
+
+            | Heroicon name: outline/x-mark
+
+            | Menu open: "block", Menu closed: "hidden"
+          svg.hidden.h-6.w-6 aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" viewbox=("0 0 24 24") xmlns="http://www.w3.org/2000/svg"
+            path d=("M6 18L18 6M6 6l12 12") stroke-linecap="round" stroke-linejoin="round" /
+      .flex.flex-1.items-center.justify-center.sm:items-stretch.sm:justify-start
+        .flex.flex-shrink-0.items-center
+          = link_to root_path, class: "text-white" do
+            = image_tag "logo-s.png", class: "hidden h-8 w-auto lg:block", alt: "Semisto"
+          / img.block.h-8.w-auto.lg:hidden alt=("Semisto") src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500" /
+          / img.hidden.h-8.w-auto.lg:block alt=("Semisto") src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500" /
+          / = link_to Rails.configuration.application_name, root_path, class: "text-white"
+        .hidden.sm:ml-6.sm:block
+          .flex.space-x-4
+            /! Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white"
+            a.bg-gray-900.text-white.px-3.py-2.rounded-md.text-sm.font-medium aria-current="page" href="#" = _("Accueil")
+            a.text-gray-300.hover:bg-gray-700.hover:text-white.px-3.py-2.rounded-md.text-sm.font-medium href="#" = _("Pôles")
+
+            button.text-gray-300.hover:bg-gray-700.hover:text-white.px-3.py-2.rounded-md.text-sm.font-medium.group.inline-flex.items-center(type="button" aria-expanded="false")
+              span = _("Pôles")
+              svg(class="text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true")
+                path(fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd")
+            a.text-gray-300.hover:bg-gray-700.hover:text-white.px-3.py-2.rounded-md.text-sm.font-medium href="#" = _("Financement")
+            a.text-gray-300.hover:bg-gray-700.hover:text-white.px-3.py-2.rounded-md.text-sm.font-medium href="#" = _("À propos")
+      .absolute.inset-y-0.right-0.flex.items-center.pr-2.sm:static.sm:inset-auto.sm:ml-6.sm:pr-0
+        = link_to "What's New", announcements_path, class: "nav-link #{unread_announcements(current_user)}"
+
+        - if user_signed_in?
+          = link_to notifications_path
+            button.rounded-full.bg-gray-800.p-1.text-gray-400.hover:text-white.focus:outline-none.focus:ring-2.focus:ring-white.focus:ring-offset-2.focus:ring-offset-gray-800 type="button"
+              span.sr-only = _("Afficher mes notifications")
+              /! Heroicon name: outline/bell
+              svg.h-6.w-6 aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" viewbox=("0 0 24 24") xmlns="http://www.w3.org/2000/svg"
+                path d=("M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0") stroke-linecap="round" stroke-linejoin="round" /
+          /! Profile dropdown
+          .relative.ml-3
+            div
+              button#user-menu-button.flex.rounded-full.bg-gray-800.text-sm.focus:outline-none.focus:ring-2.focus:ring-white.focus:ring-offset-2.focus:ring-offset-gray-800 aria-expanded="false" aria-haspopup="true" type="button"
+                span.sr-only = _("Ouvrir le menu de l'utilisateur")
+                = image_tag avatar_path(current_user, size: 40), height: 20, width: 20, class: "h-8 w-8 rounded-full"
+            /!
+              | Dropdown menu, show/hide based on menu state.
+
+              | Entering: "transition ease-out duration-100"
+              | From: "transform opacity-0 scale-95"
+              | To: "transform opacity-100 scale-100"
+              | Leaving: "transition ease-in duration-75"
+              | From: "transform opacity-100 scale-100"
+              | To: "transform opacity-0 scale-95"
+            .absolute.right-0.z-10.mt-2.w-48.origin-top-right.rounded-md.bg-white.py-1.shadow-lg.ring-1.ring-black.ring-opacity-5.focus:outline-none aria-labelledby="user-menu-button" aria-orientation="vertical" role="menu" tabindex="-1"
+              /! Active: "bg-gray-100", Not Active: ""
+              = link_to _("Paramètres"), edit_user_registration_path, class: "block px-4 py-2 text-sm text-gray-700", role: "menuitem", tabindex: "-1"
+              - if current_user.admin? && respond_to?(:madmin_root_path)
+                = link_to _("Administration"), madmin_root_path, class: "block px-4 py-2 text-sm text-gray-700", role: "menuitem", tabindex: "-1"
+              = button_to _("Me déconnecter"), destroy_user_session_path, method: :delete, class: "block px-4 py-2 text-sm text-gray-700", role: "menuitem", tabindex: "-1"
+        - else
+          = link_to _("Créer un compte"), new_user_registration_path, class: "text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+          = link_to _("Me connecter"), new_user_session_path, class: "text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+
+  /! Mobile menu, show/hide based on menu state.
+  #mobile-menu.sm:hidden
+    .space-y-1.px-2.pt-2.pb-3
+      /! Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white"
+      a.bg-gray-900.text-white.block.px-3.py-2.rounded-md.text-base.font-medium aria-current="page" href="#"  Dashboard
+      a.text-gray-300.hover:bg-gray-700.hover:text-white.block.px-3.py-2.rounded-md.text-base.font-medium href="#"  Team
+      a.text-gray-300.hover:bg-gray-700.hover:text-white.block.px-3.py-2.rounded-md.text-base.font-medium href="#"  Projects
+      a.text-gray-300.hover:bg-gray-700.hover:text-white.block.px-3.py-2.rounded-md.text-base.font-medium href="#"  Calendar
