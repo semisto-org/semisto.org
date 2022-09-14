@@ -1,9 +1,8 @@
 /! Item active: "text-gray-900", Item inactive: "text-gray-500"
-button.text-gray-500.group.inline-flex.items-center.rounded-md.bg-white.text-base.font-medium.hover:text-gray-900.focus:outline-none.focus:ring-2.focus:ring-indigo-500.focus:ring-offset-2 aria-expanded="false" type="button"
+button.text-gray-500.group.inline-flex.items-center.rounded-md.bg-white.text-base.font-medium.hover:text-gray-900.focus:outline-none.focus:ring-2.focus:ring-indigo-500.focus:ring-offset-2 aria-expanded="false" type="button" data-action="click->dropdown#toggle click@window->dropdown#hide" data-dropdown-target="button"
   span = _("Pôles")
   /!
     | Heroicon name: mini/chevron-down
-
     | Item active: "text-gray-600", Item inactive: "text-gray-400"
   svg.text-gray-400.ml-2.h-5.w-5.transition.duration-150.ease-in-out.group-hover:text-gray-500 aria-hidden="true" fill="currentColor" viewbox=("0 0 20 20") xmlns="http://www.w3.org/2000/svg"
     path clip-rule="evenodd" d=("M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z") fill-rule="evenodd" /
@@ -16,7 +15,7 @@ button.text-gray-500.group.inline-flex.items-center.rounded-md.bg-white.text-bas
   | Leaving: "transition ease-in duration-150"
   | From: "opacity-100 translate-y-0"
   | To: "opacity-0 translate-y-1"
-.absolute.z-10.mt-3.w-screen.max-w-md.transform.px-2.sm:px-0.lg:max-w-3xl(class="left-0")
+.absolute.z-10.mt-3.w-screen.max-w-md.transform.px-2.sm:px-0.lg:max-w-3xl(class="left-0" data-dropdown-target="menu")
   .overflow-hidden.rounded-lg.shadow-lg.ring-1.ring-black.ring-opacity-5
     .relative.grid.gap-6.bg-white.px-5.py-6.sm:gap-8.sm:p-8.lg:grid-cols-2
       a.-m-3.flex.items-start.rounded-lg.p-3.transition.duration-150.ease-in-out.hover:bg-gray-50 href="#"
