@@ -31,6 +31,11 @@ module.exports = {
         danger: colors.red,
         "code-400": "#fefcf9",
         "code-600": "#3c455b",
+        "semisto-1": "#927AA3",
+        "semisto-2": "#B36189",
+        "semisto-3": "#D85965",
+        "semisto-4": "#434771",
+        "semisto-5": "#CFB51C"
       },
       fontFamily: {
         sans: ['Inter', ...defaultTheme.fontFamily.sans],
