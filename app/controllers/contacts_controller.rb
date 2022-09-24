@@ -10,8 +10,8 @@ class ContactsController < ApplicationController
       redirect_to new_contact_path,
                   notice: _("Merci pour votre message. Nous vous répondons très prochainement!")
     else
-      flash.now[:alert] = _("Le message n'a malheureusement pas pu être envoyé. Pourriez-vous nous l'envoyer à hello@semisto.org? Merci!")
-      render :new, status: 422
+      flash.now[:alert] = _("Le message n'a malheureusement pas pu être envoyé à cause d'un problème technique. Pourriez-vous nous l'envoyer à hello@semisto.org? Merci!")
+      return render :new, status: 422
     end
   end
 end
