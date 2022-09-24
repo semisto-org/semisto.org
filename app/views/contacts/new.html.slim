@@ -1,0 +1,69 @@
+.relative.bg-white
+  .absolute.inset-0
+    .absolute.inset-y-0.left-0.bg-gray-50 class="w-1/2"
+  .relative.mx-auto.max-w-7xl.lg:grid.lg:grid-cols-5
+    .bg-gray-50.py-16.px-4.sm:px-6.lg:col-span-2.lg:px-8.lg:py-24.xl:pr-12
+      .mx-auto.max-w-lg
+        h2.text-2xl.font-bold.tracking-tight.text-gray-900.sm:text-3xl = _("Contacter Semisto")
+        p.mt-3.text-lg.leading-6.text-gray-500 = _("Nous serions ravis d'échanger avec vous au sujet de nos projets, des forêts comestibles et forêts-jardins.")
+        dl.mt-8.text-base.text-gray-500
+        div
+          dt.sr-only = _("Adresse postale")
+          dd
+            p Semisto ASBL
+            p rue Ernest Feron, 64
+            p 5310 Eghezée
+        .mt-6
+          dt.sr-only = _("Numéro d'entreprise")
+          dd.flex
+            svg.h-6.w-6.flex-shrink-0.text-gray-400 fill="none" stroke="currentColor" stroke-width="1.5" viewbox=("0 0 24 24") xmlns="http://www.w3.org/2000/svg"
+              path d=("M20.25 14.15v4.25c0 1.094-.787 2.036-1.872 2.18-2.087.277-4.216.42-6.378.42s-4.291-.143-6.378-.42c-1.085-.144-1.872-1.086-1.872-2.18v-4.25m16.5 0a2.18 2.18 0 00.75-1.661V8.706c0-1.081-.768-2.015-1.837-2.175a48.114 48.114 0 00-3.413-.387m4.5 8.006c-.194.165-.42.295-.673.38A23.978 23.978 0 0112 15.75c-2.648 0-5.195-.429-7.577-1.22a2.016 2.016 0 01-.673-.38m0 0A2.18 2.18 0 013 12.489V8.706c0-1.081.768-2.015 1.837-2.175a48.111 48.111 0 013.413-.387m7.5 0V5.25A2.25 2.25 0 0013.5 3h-3a2.25 2.25 0 00-2.25 2.25v.894m7.5 0a48.667 48.667 0 00-7.5 0M12 12.75h.008v.008H12v-.008z") stroke-linecap="round" stroke-linejoin="round" /
+            span.ml-3 0790.631.657
+        .mt-3
+          dt.sr-only = _("Téléphone")
+          dd.flex
+            /! Heroicon name: outline/phone
+            svg.h-6.w-6.flex-shrink-0.text-gray-400 aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" viewbox=("0 0 24 24") xmlns="http://www.w3.org/2000/svg"
+              path d=("M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z") stroke-linecap="round" stroke-linejoin="round" /
+            span.ml-3 +32 (0)498 11 92 78
+        .mt-3
+          dt.sr-only = _("Email")
+          dd.flex
+            /! Heroicon name: outline/envelope
+            svg.h-6.w-6.flex-shrink-0.text-gray-400 aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" viewbox=("0 0 24 24") xmlns="http://www.w3.org/2000/svg"
+              path d=("M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75") stroke-linecap="round" stroke-linejoin="round" /
+            span.ml-3 = mail_to "hello@semisto.org"
+
+        = link_to funding_path, class: "mt-6 inline-flex items-center rounded-full bg-yellow-500 p-1 pr-2 text-semisto-4 hover:text-gray-900 sm:text-base lg:text-sm xl:text-base" do
+          span.rounded-full.bg-orange-600.px-3.text-sm.font-semibold.leading-5.text-white.hover:text-yellow-200 class="py-0.5" = _("Financement en cours")
+          span.ml-4.text-sm = _("Vous aussi, financez Semisto!")
+          /! Heroicon name: mini/chevron-right
+          svg.ml-2.h-5.w-5.text-white aria-hidden="true" fill="currentColor" viewbox=("0 0 20 20") xmlns="http://www.w3.org/2000/svg"
+            path clip-rule="evenodd" d=("M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z") fill-rule="evenodd" /
+
+        / p.mt-6.text-base.text-gray-500
+          | Looking for careers?
+          a.font-medium.text-gray-700.underline href="#"  View all job openings
+    .bg-white.py-16.px-4.sm:px-6.lg:col-span-3.lg:py-24.lg:px-8.xl:pl-12
+      .mx-auto.max-w-lg.lg:max-w-none
+        = form_for @contact, html: { class: "grid grid-cols-1 gap-y-6" } do |f|
+          div
+            = f.label :name, _("Mon nom"), class: "sr-only"
+            = f.text_field :name, required: true, autocomplete: "name", placeholder: _("Mon nom"), class: "block w-full rounded-md border-gray-300 py-3 px-4 placeholder-gray-500 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+          div
+            = f.label :email, _("Mon adresse email"), class: "sr-only"
+            = f.email_field :email, required: true, autocomplete: "email", placeholder: _("Mon adresse email"), class: "block w-full rounded-md border-gray-300 py-3 px-4 placeholder-gray-500 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+          div
+            = f.label :phone, _("Mon numéro de téléphone"), class: "sr-only"
+            = f.text_field :phone, autocomplete: "phone", placeholder: _("Mon numéro de téléphone"), class: "block w-full rounded-md border-gray-300 py-3 px-4 placeholder-gray-500 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+          div.hidden
+            = f.label :nickname
+            = f.text_field :nickname, placeholder: _("Laissez ce champ vide")
+          div
+            = f.label :message, _("Mon message"), class: "sr-only"
+            = f.text_area :message, rows: 6, class: "block w-full rounded-md border-gray-300 py-3 px-4 placeholder-gray-500 shadow-sm focus:border-indigo-500 focus:ring-indigo-500", placeholder: _("Mon message")
+          div
+            button.inline-flex.justify-center.rounded-md.border.border-transparent.bg-indigo-600.py-3.px-6.text-base.font-medium.text-white.shadow-sm.hover:bg-indigo-700.focus:outline-none.focus:ring-2.focus:ring-indigo-500.focus:ring-offset-2 type="submit"
+              svg.w-6.h-6.flex-shrink-0 fill="none" stroke="currentColor" stroke-width="1.5" viewbox=("0 0 24 24") xmlns="http://www.w3.org/2000/svg"
+                path d=("M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5") stroke-linecap="round" stroke-linejoin="round" /
+              span.ml-3 = _("Envoyer")

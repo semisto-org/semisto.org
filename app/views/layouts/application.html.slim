@@ -15,11 +15,12 @@ html(lang="#{I18n.locale}")
       .relative.bg-indigo-100.py-6
         = render "shared/navbar"
 
+      = render 'shared/notices'
+
       = yield
 
       /= render 'shared/banner'
       /= render 'shared/navbar'
-      /= render 'shared/notices'
       /= yield
 
       = render 'shared/footer'

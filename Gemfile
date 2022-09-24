@@ -54,6 +54,8 @@ group :development, :test do
 end
 
 group :development do
+  gem "mailcatcher"
+
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem "web-console"
 
@@ -90,4 +92,6 @@ gem "responders", github: "heartcombo/responders", branch: "main"
 gem 'gettext_i18n_rails'
 gem 'gettext', '>=3.0.2', :require => false
 gem 'ruby_parser', :require => false, :group => :development
+gem "mail_form", "~> 1.9.0"
+gem "mailgun-ruby", "~> 1.2.5"
 gem "slim-rails"

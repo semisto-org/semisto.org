@@ -3,8 +3,9 @@ require 'sidekiq/web'
 Rails.application.routes.draw do
   draw :madmin
 
+  resources :contacts, only: [:new, :create]
+
   get '/agence-de-communication', to: 'hubs#agency', as: :agency
-  get '/contact', to: 'pages#contact', as: :contact
   get '/financement', to: 'pages#funding', as: :funding
   get '/a-propos', to: 'pages#about', as: :about
   get '/bureau-d-etudes', to: 'hubs#design', as: :design
