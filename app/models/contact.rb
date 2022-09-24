@@ -10,8 +10,7 @@ class Contact < MailForm::Base
   def headers
     {
       subject: "Prise de contact via le site web (#{name})",
-      to: "hello@semisto.org",
-      from: %("#{name}" <#{email}>)
+      to: "hello@semisto.org"
     }
   end
 end
