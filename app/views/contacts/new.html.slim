@@ -46,24 +46,4 @@
           a.font-medium.text-gray-700.underline href="#"  View all job openings
     .bg-white.py-16.px-4.sm:px-6.lg:col-span-3.lg:py-24.lg:px-8.xl:pl-12
       .mx-auto.max-w-lg.lg:max-w-none
-        = form_for @contact, html: { class: "grid grid-cols-1 gap-y-6" } do |f|
-          div
-            = f.label :name, _("Mon nom"), class: "sr-only"
-            = f.text_field :name, required: true, autocomplete: "name", placeholder: _("Mon nom"), class: "block w-full rounded-md border-gray-300 py-3 px-4 placeholder-gray-500 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
-          div
-            = f.label :email, _("Mon adresse email"), class: "sr-only"
-            = f.email_field :email, required: true, autocomplete: "email", placeholder: _("Mon adresse email"), class: "block w-full rounded-md border-gray-300 py-3 px-4 placeholder-gray-500 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
-          div
-            = f.label :phone, _("Mon numéro de téléphone"), class: "sr-only"
-            = f.text_field :phone, autocomplete: "phone", placeholder: _("Mon numéro de téléphone"), class: "block w-full rounded-md border-gray-300 py-3 px-4 placeholder-gray-500 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
-          div.hidden
-            = f.label :nickname
-            = f.text_field :nickname, placeholder: _("Laissez ce champ vide")
-          div
-            = f.label :message, _("Mon message"), class: "sr-only"
-            = f.text_area :message, rows: 6, class: "block w-full rounded-md border-gray-300 py-3 px-4 placeholder-gray-500 shadow-sm focus:border-indigo-500 focus:ring-indigo-500", placeholder: _("Mon message")
-          div
-            button.inline-flex.justify-center.rounded-md.border.border-transparent.bg-indigo-600.py-3.px-6.text-base.font-medium.text-white.shadow-sm.hover:bg-indigo-700.focus:outline-none.focus:ring-2.focus:ring-indigo-500.focus:ring-offset-2 type="submit"
-              svg.w-6.h-6.flex-shrink-0 fill="none" stroke="currentColor" stroke-width="1.5" viewbox=("0 0 24 24") xmlns="http://www.w3.org/2000/svg"
-                path d=("M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5") stroke-linecap="round" stroke-linejoin="round" /
-              span.ml-3 = _("Envoyer")
+        = render "form", contact: @contact
