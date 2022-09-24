@@ -2,18 +2,32 @@ require 'sidekiq/web'
 
 Rails.application.routes.draw do
   draw :madmin
-  get '/privacy', to: 'home#privacy'
-  get '/terms', to: 'home#terms'
-authenticate :user, lambda { |u| u.admin? } do
-  mount Sidekiq::Web => '/sidekiq'
 
-  namespace :madmin do
-    resources :impersonates do
-      post :impersonate, on: :member
-      post :stop_impersonating, on: :collection
+  get '/agence-de-communication', to: 'hubs#agency', as: :agency
+  get '/contact', to: 'pages#contact', as: :contact
+  get '/financement', to: 'pages#funding', as: :funding
+  get '/a-propos', to: 'pages#about', as: :about
+  get '/bureau-d-etudes', to: 'hubs#design', as: :design
+  get '/financement-de-projets', to: 'hubs#funding', as: :funding_hub
+  get '/food-forest-heroes', to: 'hubs#heroes', as: :heroes
+  get '/forets-comestibles', to: 'pages#food_forests', as: :food_forests
+  get '/open-source', to: 'pages#open_source', as: :open_source
+  get '/pepiniere-ecole', to: 'hubs#nursery', as: :nursery
+  get '/formations', to: 'hubs#trainings', as: :trainings
+
+  get '/vie-privee', to: 'home#privacy', as: :privacy
+  get '/conditions', to: 'home#terms', as: :terms
+
+  authenticate :user, lambda { |u| u.admin? } do
+    mount Sidekiq::Web => '/sidekiq'
+
+    namespace :madmin do
+      resources :impersonates do
+        post :impersonate, on: :member
+        post :stop_impersonating, on: :collection
+      end
     end
   end
-end
 
   resources :notifications, only: [:index]
   resources :announcements, only: [:index]

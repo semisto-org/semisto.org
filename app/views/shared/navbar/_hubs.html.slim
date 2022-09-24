@@ -18,7 +18,7 @@ button.text-gray-500.group.inline-flex.items-center.rounded-md.text-base.font-me
 .absolute.z-10.mt-3.w-screen.max-w-md.transform.px-2.sm:px-0.lg:max-w-3xl(class="left-0" data-dropdown-target="menu")
   .overflow-hidden.rounded-lg.shadow-lg.ring-1.ring-black.ring-opacity-5
     .relative.grid.gap-6.bg-white.px-5.py-6.sm:gap-8.sm:p-8.lg:grid-cols-2
-      a.-m-3.flex.items-start.rounded-lg.p-3.transition.duration-150.ease-in-out.hover:bg-gray-50 href="#"
+      = link_to trainings_path, class: "-m-3 flex items-start rounded-lg p-3 transition duration-150 ease-in-out hover:bg-gray-50" do
         .flex.h-10.w-10.flex-shrink-0.items-center.justify-center.rounded-md.bg-green-500.text-white.sm:h-12.sm:w-12
           /! Heroicon name: outline/chart-bar
           svg.h-6.w-6 aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" viewbox=("0 0 24 24") xmlns="http://www.w3.org/2000/svg"
@@ -26,7 +26,7 @@ button.text-gray-500.group.inline-flex.items-center.rounded-md.text-base.font-me
         .ml-4
           p.text-base.font-medium.text-gray-900 = _("Formations")
           p.mt-1.text-sm.text-gray-500 = _("Se former pour prendre confiance, semer et planter")
-      a.-m-3.flex.items-start.rounded-lg.p-3.transition.duration-150.ease-in-out.hover:bg-gray-50 href="#"
+      = link_to nursery_path, class: "-m-3 flex items-start rounded-lg p-3 transition duration-150 ease-in-out hover:bg-gray-50" do
         .flex.h-10.w-10.flex-shrink-0.items-center.justify-center.rounded-md.bg-blue-500.text-white.sm:h-12.sm:w-12
           /! Heroicon name: outline/cursor-arrow-rays
           svg.h-6.w-6 aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" viewbox=("0 0 24 24") xmlns="http://www.w3.org/2000/svg"
@@ -34,7 +34,7 @@ button.text-gray-500.group.inline-flex.items-center.rounded-md.text-base.font-me
         .ml-4
           p.text-base.font-medium.text-gray-900 = _("Pépinière-école")
           p.mt-1.text-sm.text-gray-500 = _("Se procurer des plants et apprendre à en multiplier")
-      a.-m-3.flex.items-start.rounded-lg.p-3.transition.duration-150.ease-in-out.hover:bg-gray-50 href="#"
+      = link_to design_path, class: "-m-3 flex items-start rounded-lg p-3 transition duration-150 ease-in-out hover:bg-gray-50" do
         .flex.h-10.w-10.flex-shrink-0.items-center.justify-center.rounded-md.bg-red-500.text-white.sm:h-12.sm:w-12
           /! Heroicon name: outline/shield-check
           svg.h-6.w-6 aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" viewbox=("0 0 24 24") xmlns="http://www.w3.org/2000/svg"
@@ -42,7 +42,7 @@ button.text-gray-500.group.inline-flex.items-center.rounded-md.text-base.font-me
         .ml-4
           p.text-base.font-medium.text-gray-900 = _("Bureau d'études")
           p.mt-1.text-sm.text-gray-500 = _("Nos services de conception pour particuliers, entreprises et collectifs")
-      a.-m-3.flex.items-start.rounded-lg.p-3.transition.duration-150.ease-in-out.hover:bg-gray-50 href="#"
+      = link_to agency_path, class: "-m-3 flex items-start rounded-lg p-3 transition duration-150 ease-in-out hover:bg-gray-50" do
         .flex.h-10.w-10.flex-shrink-0.items-center.justify-center.rounded-md.bg-orange-500.text-white.sm:h-12.sm:w-12
           /! Heroicon name: outline/squares-2x2
           svg.h-6.w-6 aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" viewbox=("0 0 24 24") xmlns="http://www.w3.org/2000/svg"
@@ -50,7 +50,7 @@ button.text-gray-500.group.inline-flex.items-center.rounded-md.text-base.font-me
         .ml-4
           p.text-base.font-medium.text-gray-900 = _("Agence de communication")
           p.mt-1.text-sm.text-gray-500 = _("Une agence créative pour la diffusion de nos savoirs")
-      a.-m-3.flex.items-start.rounded-lg.p-3.transition.duration-150.ease-in-out.hover:bg-gray-50 href="#"
+      = link_to heroes_path, class: "-m-3 flex items-start rounded-lg p-3 transition duration-150 ease-in-out hover:bg-gray-50" do
         .flex.h-10.w-10.flex-shrink-0.items-center.justify-center.rounded-md.bg-indigo-500.text-white.sm:h-12.sm:w-12
           /! Heroicon name: outline/arrow-path
           svg.h-6.w-6 aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" viewbox=("0 0 24 24") xmlns="http://www.w3.org/2000/svg"
@@ -58,7 +58,7 @@ button.text-gray-500.group.inline-flex.items-center.rounded-md.text-base.font-me
         .ml-4
           p.text-base.font-medium.text-gray-900 = _("Food Forest Heroes")
           p.mt-1.text-sm.text-gray-500 = _("Notre collectif de planteurs et planteuses")
-      a.-m-3.flex.items-start.rounded-lg.p-3.transition.duration-150.ease-in-out.hover:bg-gray-50 href="#"
+      = link_to funding_hub_path, class: "-m-3 flex items-start rounded-lg p-3 transition duration-150 ease-in-out hover:bg-gray-50" do
         .flex.h-10.w-10.flex-shrink-0.items-center.justify-center.rounded-md.bg-pink-500.text-white.sm:h-12.sm:w-12
           /! Heroicon name: outline/document-chart-bar
           svg.h-6.w-6 aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" viewbox=("0 0 24 24") xmlns="http://www.w3.org/2000/svg"

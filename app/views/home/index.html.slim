@@ -1,0 +1,57 @@
+.relative.pb-16.sm:pb-24.lg:pb-32
+  main.mx-auto.mt-10.max-w-7xl.px-4.sm:mt-24.sm:px-6.lg:mt-10
+    .lg:grid.lg:grid-cols-12.lg:gap-8
+      .sm:text-center.md:mx-auto.md:max-w-2xl.lg:col-span-6.lg:text-left
+
+        / Financing in progress
+        = link_to funding_path, class: "inline-flex items-center rounded-full bg-yellow-500 p-1 pr-2 text-semisto-4 hover:text-gray-900 sm:text-base lg:text-sm xl:text-base" do
+          span.rounded-full.bg-orange-600.px-3.text-sm.font-semibold.leading-5.text-white.hover:text-yellow-200 class="py-0.5" = _("Financement en cours")
+          span.ml-4.text-sm = _("Vous aussi, financez Semisto!")
+          /! Heroicon name: mini/chevron-right
+          svg.ml-2.h-5.w-5.text-white aria-hidden="true" fill="currentColor" viewbox=("0 0 20 20") xmlns="http://www.w3.org/2000/svg"
+            path clip-rule="evenodd" d=("M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z") fill-rule="evenodd" /
+
+        h1
+          / span.block.text-base.font-semibold.text-gray-500.sm:text-lg.lg:text-base.xl:text-lg = _("Bientôt")
+          span.mt-4.block.text-4xl.font-bold.tracking-tight.sm:text-5xl.xl:text-5xl
+            span.flex.text-semisto-3
+              svg.w-12.h-12 fill="none" stroke="currentColor" stroke-width="1.5" viewbox=("0 0 24 24") xmlns="http://www.w3.org/2000/svg"
+                path d=("M4.5 12.75l6 6 9-13.5") stroke-linecap="round" stroke-linejoin="round" /
+              = _("Forêts-jardins")
+            span.flex.text-semisto-2
+              svg.w-12.h-12 fill="none" stroke="currentColor" stroke-width="1.5" viewbox=("0 0 24 24") xmlns="http://www.w3.org/2000/svg"
+                path d=("M4.5 12.75l6 6 9-13.5") stroke-linecap="round" stroke-linejoin="round" /
+              = _("Forêts comestibles")
+            span.flex.text-semisto-1
+              svg.w-12.h-12 fill="none" stroke="currentColor" stroke-width="1.5" viewbox=("0 0 24 24") xmlns="http://www.w3.org/2000/svg"
+                path d=("M4.5 12.75l6 6 9-13.5") stroke-linecap="round" stroke-linejoin="round" /
+              = _("Jardins multi-étagés")
+        p.mt-3.text-base.text-gray-500.sm:mt-5.sm:text-xl.lg:text-lg.xl:text-xl = _("Semisto donne les moyens aux générations présentes et futures de transformer l’Europe en forêts-jardins et forêts comestibles : des écosystèmes résilients à impact ultra-positif pour les humains, le sol et la biodiversité, pour nourrir l’humanité et régénérer la biosphère.")
+        .mt-8.sm:mx-auto.sm:max-w-lg.sm:text-center.lg:mx-0.lg:text-left
+          p.text-base.font-medium.text-gray-900 = _("Nos formations démarrerons en 2023. Envie d'en savoir plus? Inscrivez-vous pour que nous vous tenions au courant.")
+          form.mt-3.sm:flex action="#" method="POST"
+            label.sr-only for="email" = _("Adresse email")
+            input#email.block.w-full.rounded-md.border-gray-300.py-3.text-base.placeholder-gray-500.shadow-sm.focus:border-indigo-500.focus:ring-indigo-500.sm:flex-1 name="email" placeholder=("#{_("Mon adresse email")}") type="email" /
+            button.mt-3.w-full.rounded-md.border.border-transparent.bg-gray-800.px-6.py-3.text-base.font-medium.text-white.shadow-sm.hover:bg-gray-900.focus:outline-none.focus:ring-2.focus:ring-indigo-500.focus:ring-offset-2.sm:mt-0.sm:ml-3.sm:inline-flex.sm:w-auto.sm:flex-shrink-0.sm:items-center type="submit" = _("Tenez-moi au courant")
+          p.mt-3.text-sm.text-gray-500
+            = _("Nous prenons soin de vos données. Consultez notre")
+            a.font-medium.text-gray-500.underline href="#" =< _("charte de respect de la vie privée")
+      .relative.mt-12.sm:mx-auto.sm:max-w-lg.lg:col-span-6.lg:mx-0.lg:mt-0.lg:flex.lg:max-w-none.lg:items-center
+        svg.absolute.top-0.origin-top.-translate-y-8.scale-75.transform.sm:scale-100.lg:hidden aria-hidden="true" class=("left-1/2 -translate-x-1/2") fill="none" height="784" viewbox=("0 0 640 784") width="640"
+          defs
+            pattern#4f4f415c-a0e9-44c2-9601-6ded5a34a13e height="20" patternunits="userSpaceOnUse" width="20" x="118" y="0"
+              rect.text-gray-200 fill="currentColor" height="4" width="4" x="0" y="0" /
+          rect.text-gray-50 fill="currentColor" height="640" width="640" y="72" /
+          rect fill="url(#4f4f415c-a0e9-44c2-9601-6ded5a34a13e)" height="784" width="404" x="118" /
+        .relative.mx-auto.w-full.rounded-lg.shadow-lg.lg:max-w-md
+          button.relative.block.w-full.overflow-hidden.rounded-lg.bg-white.focus:outline-none.focus:ring-2.focus:ring-indigo-500.focus:ring-offset-2 type="button"
+            span.sr-only = _("Consultez notre vidéo pour en savoir plus")
+            img.w-full alt="" src="https://images.unsplash.com/photo-1597175587534-f8c5307f9c0a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" /
+            span.absolute.inset-0.flex.h-full.w-full.items-center.justify-center aria-hidden="true"
+              svg.h-20.w-20.text-indigo-500 fill="currentColor" viewbox=("0 0 84 84")
+                circle cx="42" cy="42" fill="white" opacity="0.9" r="42" /
+                path d=("M55.5039 40.3359L37.1094 28.0729C35.7803 27.1869 34 28.1396 34 29.737V54.263C34 55.8604 35.7803 56.8131 37.1094 55.9271L55.5038 43.6641C56.6913 42.8725 56.6913 41.1275 55.5039 40.3359Z") /
+
+  / = render "shared/benefits"
+
+  / = render "shared/blog"

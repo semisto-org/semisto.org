@@ -2,7 +2,7 @@ div
   nav.relative.mx-auto.flex.max-w-7xl.items-center.justify-between.px-4.sm:px-6 aria-label="Global"
     .flex.flex-1.items-center
       .flex.w-full.items-center.justify-between.md:w-auto
-        a href="#"
+        = link_to root_path do
           span.sr-only Semisto
           = image_tag "logo-s.png", class: "h-8 w-auto sm:h-10", alt: ""
         .-mr-2.flex.items-center.md:hidden
@@ -13,12 +13,14 @@ div
               path d=("M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5") stroke-linecap="round" stroke-linejoin="round" /
       .hidden.md:ml-10.md:block.md:space-x-10(data-controller="dropdown" data-dropdown-invisible-class="opacity-0 translate-y-1" data-dropdown-visible-class="opacity-100 translate-y-0" data-dropdown-entering-class="transition ease-out" data-dropdown-enter-timeout="200" data-dropdown-leaving-class="transition ease-in" data-dropdown-leave-timeout="150")
         = render "shared/navbar/hubs"
-        = link_to _("Wiki"), "#", class: "font-medium text-gray-500 hover:text-gray-900"
-        = link_to _("À propos"), "#", class: "font-medium text-gray-500 hover:text-gray-900"
-        = link_to _("Contact"), "#", class: "font-medium text-gray-500 hover:text-gray-900"
+        = link_to _("Forêts comestibles"), food_forests_path, class: "font-medium text-gray-500 hover:text-gray-900"
+        = link_to _("À propos"), about_path, class: "font-medium text-gray-500 hover:text-gray-900"
+        = link_to _("Contact"), contact_path, class: "font-medium text-gray-500 hover:text-gray-900"
     .hidden.text-right.md:block
+      span.mr-6.inline-flex.rounded-md.shadow-md.ring-1.ring-black.ring-opacity-5
+        a.inline-flex.items-center.rounded-md.border.border-transparent.bg-white.px-4.py-2.text-base.font-medium.text-indigo-600.hover:bg-gray-50 href="https://wiki.semisto.org" = _("Wiki 📚")
       span.inline-flex.rounded-md.shadow-md.ring-1.ring-black.ring-opacity-5
-        a.inline-flex.items-center.rounded-md.border.border-transparent.bg-white.px-4.py-2.text-base.font-medium.text-indigo-600.hover:bg-gray-50 href="#"  = _("Me connecter")
+        a.inline-flex.items-center.rounded-md.border.border-transparent.bg-white.px-4.py-2.text-base.font-medium.text-indigo-600.hover:bg-gray-50 href="https://wiki.semisto.org/base-de-donnees" = _("Base de données 🌱")
   /!
     | Mobile menu, show/hide based on menu open state.
 
