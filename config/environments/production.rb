@@ -72,7 +72,7 @@ Rails.application.configure do
   config.action_mailer.delivery_method = :mailgun
   config.action_mailer.mailgun_settings = {
     api_key: Rails.application.credentials.dig(:mailgun, :api_key),
-    domain: 'semisto.org',
+    domain: 'mg.semisto.org',
     api_host: 'api.eu.mailgun.net'
   }
 
