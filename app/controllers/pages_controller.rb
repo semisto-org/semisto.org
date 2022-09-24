@@ -10,4 +10,7 @@ class PagesController < ApplicationController
 
   def funding
   end
+
+  def open_source
+  end
 end
