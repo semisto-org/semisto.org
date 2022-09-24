@@ -11,7 +11,7 @@ class Contact < MailForm::Base
     {
       subject: "Prise de contact via le site web (#{name})",
       to: "hello@semisto.org",
-      from: "hello@semisto.org",
+      from: "hello@mg.semisto.org",
       reply_to: email
     }
   end
