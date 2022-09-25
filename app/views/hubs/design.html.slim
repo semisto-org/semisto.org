@@ -1,21 +1,36 @@
-.relative.bg-gray-50.px-4.pt-16.pb-20.sm:px-6.lg:px-8.lg:pt-24.lg:pb-28
+.bg-white
+  .mx-auto.max-w-7xl.py-8.px-4.sm:py-12.sm:px-6.lg:flex.lg:justify-between.lg:px-8
+    .max-w-7xl
+      h2.text-4xl.font-bold.tracking-tight.text-gray-900.sm:text-5xl.lg:text-6xl Bureau d'études
+      p.mt-5.text-xl.text-gray-500 Conception de forêts comestibles, forêts-jardins et jardins multi-étagés
+
+.relative.bg-gray-50.px-4.pb-20.sm:px-6.lg:px-8.lg:pb-28
   .absolute.inset-0
     .bg-white class=("h-1/3 sm:h-2/3")
   .relative.mx-auto.max-w-7xl
-    .text-center
-      h2.text-3xl.font-bold.tracking-tight.text-gray-900.sm:text-4xl Projets réalisés
-      / p.mx-auto.mt-3.max-w-2xl.text-xl.text-gray-500.sm:mt-4 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa libero labore natus atque, ducimus sed.
+    h2.text-3xl.font-bold.tracking-tight.text-gray-900.sm:text-4xl Projets réalisés
+    / p.mx-auto.mt-3.max-w-2xl.text-xl.text-gray-500.sm:mt-4 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa libero labore natus atque, ducimus sed.
     .mx-auto.mt-12.grid.max-w-lg.gap-5.lg:max-w-none.lg:grid-cols-3
-      .flex.flex-col.overflow-hidden.rounded-lg.shadow-lg
+
+      / Mon Idée
+      .flex.flex-col.overflow-hidden.rounded-lg.shadow-lg(data-controller="modal")
         .flex-shrink-0
-          = image_tag "designs/foret-jardin-neufchateau.jpg", alt: "", class: "h-48 w-full object-cover"
+          a(href="#" data-action="click->modal#open")
+            = image_tag "designs/foret-jardin-neufchateau.jpg", alt: "Forêt-jardin à Neufchâteau (Belgique)", class: "h-full w-full object-cover"
+          .hidden.animated.fadeIn.fixed.inset-0.overflow-y-auto.flex.items-center.justify-center data-action=("click->modal#closeBackground keyup@window->modal#closeWithKeyboard") data-modal-target="container" style=("z-index: 9999;")
+            .max-h-screen.w-full.max-w-2xl.relative
+              .m-1.bg-white.rounded.shadow
+                .p-2
+                  = image_tag "designs/foret-jardin-neufchateau.jpg", alt: "Forêt-jardin à Neufchâteau (Belgique)", class: "h-full w-full object-cover"
         .flex.flex-1.flex-col.justify-between.bg-white.p-6
           .flex-1
-            p.text-sm.font-medium.text-indigo-600
-              a.hover:underline href="#" Neufchâteau, Belgique
-            a.mt-2.block href="#"
-            p.text-xl.font-semibold.text-gray-900 Forêt-jardin
+            p.text-sm.font-medium.text-semisto-1 Neufchâteau, Belgique
+            p.mt-2.text-xl.font-semibold.text-gray-900 Forêt-jardin
             p.mt-3.text-base.text-gray-500 Antoine et Geneviève rêvent d'un lieu résilient et productif où une forêt-jardin les nourrit au rythme des saisons. Ce rêve, ils vont le réaliser dans les prochaines années sur ce terrain de 80 ares en face de leur maison, à 500 mètres d’altitude.
+            .flex.mt-4.space-x-2
+              = link_to "Design", asset_url("designs/foret-jardin-neufchateau.jpg"), onclick: "window.open(this.href); return false;", class: "inline-flex items-center rounded-md border border-transparent bg-indigo-100 px-3 py-2 text-sm font-medium leading-4 text-indigo-700 hover:bg-indigo-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+              = link_to "Plantations", "https://somber-squid-78b.notion.site/338b61b3253a438ebc79a515e9e5679a?v=82b04afbc4a249f5bf7f895b0bfb142a", class: "inline-flex items-center rounded-md border border-transparent bg-indigo-100 px-3 py-2 text-sm font-medium leading-4 text-indigo-700 hover:bg-indigo-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+
           / .mt-6.flex.items-center
             .flex-shrink-0
               a href="#"
@@ -28,43 +43,79 @@
                 time datetime="2020-03-16"  Mar 16, 2020
                 span aria-hidden="true"  &middot;
                 span 6 min read
-      .flex.flex-col.overflow-hidden.rounded-lg.shadow-lg
+
+      / Poisson-Moulin
+      .flex.flex-col.overflow-hidden.rounded-lg.shadow-lg(data-controller="modal")
         .flex-shrink-0
-          = image_tag "designs/foret-jardin-poisson-moulin.jpg", alt: "", class: "h-48 w-full object-cover"
+          a(href="#" data-action="click->modal#open")
+            = image_tag "designs/foret-jardin-poisson-moulin.jpg", alt: "Jardin-forêt à Poisson-moulin (Belgique)", class: "h-full w-full object-cover"
+          .hidden.animated.fadeIn.fixed.inset-0.overflow-y-auto.flex.items-center.justify-center data-action=("click->modal#closeBackground keyup@window->modal#closeWithKeyboard") data-modal-target="container" style=("z-index: 9999;")
+            .max-h-screen.w-full.max-w-2xl.relative
+              .m-1.bg-white.rounded.shadow
+                .p-2
+                  = image_tag "designs/foret-jardin-poisson-moulin.jpg", alt: "Jardin-forêt à Poisson-moulin (Belgique)", class: "h-full w-full object-cover"
         .flex.flex-1.flex-col.justify-between.bg-white.p-6
           .flex-1
-            p.text-sm.font-medium.text-indigo-600
-              a.hover:underline href="#" Poisson-Moulin, Belgique
-            a.mt-2.block href="#"
-            p.text-xl.font-semibold.text-gray-900 Verger multi-étagé
+            p.text-sm.font-medium.text-semisto-1 Poisson-Moulin, Belgique
+            p.mt-2.text-xl.font-semibold.text-gray-900 Verger multi-étagé
             p.mt-3.text-base.text-gray-500 Jeremy voulait diversifier un verger peu productif. Les premières étapes: protéger des vents froids et préparer le sol avant les plantations, dans un village à plus de 450 mètres d'altitude.
-      .flex.flex-col.overflow-hidden.rounded-lg.shadow-lg
+            .flex.mt-4.space-x-2
+              = link_to "Design", asset_url("designs/foret-jardin-poisson-moulin.jpg"), onclick: "window.open(this.href); return false;", class: "inline-flex items-center rounded-md border border-transparent bg-indigo-100 px-3 py-2 text-sm font-medium leading-4 text-indigo-700 hover:bg-indigo-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+              = link_to "Plantations", "https://somber-squid-78b.notion.site/2aa9de33685946e8804e8093d0c02b37?v=c50ffa884c5d4816afcacb236010bbef", class: "inline-flex items-center rounded-md border border-transparent bg-indigo-100 px-3 py-2 text-sm font-medium leading-4 text-indigo-700 hover:bg-indigo-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+
+      / Jodoigne-Souveraine
+      .flex.flex-col.overflow-hidden.rounded-lg.shadow-lg(data-controller="modal")
         .flex-shrink-0
-          = image_tag "designs/foret-jardin-bolinne.jpg", alt: "", class: "h-48 w-full object-cover"
+          a(href="#" data-action="click->modal#open")
+            = image_tag "designs/foret-jardin-jodoigne-souveraine.png", alt: "", class: "h-full w-full object-cover"
+          .hidden.animated.fadeIn.fixed.inset-0.overflow-y-auto.flex.items-center.justify-center data-action=("click->modal#closeBackground keyup@window->modal#closeWithKeyboard") data-modal-target="container" style=("z-index: 9999;")
+            .max-h-screen.w-full.max-w-2xl.relative
+              .m-1.bg-white.rounded.shadow
+                .p-2
+                  = image_tag "designs/foret-jardin-jodoigne-souveraine.png", alt: "Jardin-forêt à Poisson-moulin (Belgique)", class: "h-full w-full object-cover"
         .flex.flex-1.flex-col.justify-between.bg-white.p-6
           .flex-1
-            p.text-sm.font-medium.text-indigo-600
-              a.hover:underline href="#" Jodoigne-Souveraine, Belgique
-            a.mt-2.block href="#"
-            p.text-xl.font-semibold.text-gray-900 Jardin permaculturel
-            p.mt-3.text-base.text-gray-500 Les propriétaires arrivent sur un terrain vide et construisent une maison écoresponsable avec [Archinaturelle](https://archinaturelle.be/). Leur vision était claire et leurs besoins et envies identifiables. Pour ce projet sur 15 ares, j'ai fourni une proposition d'aménagement du jardin et une sélection de plantations d'arbres et arbustes pour démarrer leur jardin-forêt. Les plantations commenceront cet automne-hiver 2021.
-      .flex.flex-col.overflow-hidden.rounded-lg.shadow-lg
+            p.text-sm.font-medium.text-semisto-1 Jodoigne-Souveraine, Belgique
+            p.mt-2.text-xl.font-semibold.text-gray-900 Jardin permaculturel
+            p.mt-3.text-base.text-gray-500 Les propriétaires arrivent sur un terrain vide et construisent une maison écoresponsable avec #{link_to("Archinaturelle", "https://archinaturelle.be/")}. Leur vision était claire et leurs besoins et envies identifiables. Pour ce projet sur 15 ares, nous avons fourni une proposition d'aménagement du jardin et une sélection de plantations d'arbres et arbustes pour démarrer leur jardin-forêt.
+            .flex.mt-4.space-x-2
+              = link_to "Design", asset_url("designs/foret-jardin-jodoigne-souveraine.png"), onclick: "window.open(this.href); return false;", class: "inline-flex items-center rounded-md border border-transparent bg-indigo-100 px-3 py-2 text-sm font-medium leading-4 text-indigo-700 hover:bg-indigo-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+              = link_to "Plantations", "https://somber-squid-78b.notion.site/c3b4664151d44664a77167e0899387c2?v=f4c5ac2575d0415a8b4c11825b7b955a", class: "inline-flex items-center rounded-md border border-transparent bg-indigo-100 px-3 py-2 text-sm font-medium leading-4 text-indigo-700 hover:bg-indigo-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+
+      / Tarchamps
+      .flex.flex-col.overflow-hidden.rounded-lg.shadow-lg(data-controller="modal")
         .flex-shrink-0
-          = image_tag "designs/foret-jardin-bolinne.jpg", alt: "", class: "h-48 w-full object-cover"
+          a(href="#" data-action="click->modal#open")
+            = image_tag "designs/foret-jardin-tarchamps.png", alt: "", class: "h-full w-full object-cover"
+          .hidden.animated.fadeIn.fixed.inset-0.overflow-y-auto.flex.items-center.justify-center data-action=("click->modal#closeBackground keyup@window->modal#closeWithKeyboard") data-modal-target="container" style=("z-index: 9999;")
+            .max-h-screen.w-full.max-w-2xl.relative
+              .m-1.bg-white.rounded.shadow
+                .p-2
+                  = image_tag "designs/foret-jardin-tarchamps.png", alt: "Jardin-forêt à Poisson-moulin (Belgique)", class: "h-full w-full object-cover"
         .flex.flex-1.flex-col.justify-between.bg-white.p-6
           .flex-1
-            p.text-sm.font-medium.text-indigo-600
-              a.hover:underline href="#" Tarchamps, Luxembourg
-            a.mt-2.block href="#"
-            p.text-xl.font-semibold.text-gray-900 Jardin nourricier
-            p.mt-3.text-base.text-gray-500 Ce projet a été réalisé en collaboration avec Corentin d'[ArbusteFruitier.com](https://www.arbustefruitier.com). La plupart des plantations ont été effectuées à l'automne 2021. Des haies vives ont été plantées afin de rapidement protéger les plantations des vents froids.
-      .flex.flex-col.overflow-hidden.rounded-lg.shadow-lg
+            p.text-sm.font-medium.text-semisto-1 Tarchamps, Luxembourg
+            p.mt-2.text-xl.font-semibold.text-gray-900 Jardin nourricier
+            p.mt-3.text-base.text-gray-500 Ce projet a été réalisé en collaboration avec Corentin d'#{link_to("ArbusteFruitier.com", "https://www.arbustefruitier.com")}. La plupart des plantations ont été effectuées à l'automne 2021. Des haies vives ont été plantées afin de rapidement protéger les plantations des vents froids.
+            .flex.mt-4.space-x-2
+              = link_to "Design", asset_url("designs/foret-jardin-tarchamps.png"), onclick: "window.open(this.href); return false;", class: "inline-flex items-center rounded-md border border-transparent bg-indigo-100 px-3 py-2 text-sm font-medium leading-4 text-indigo-700 hover:bg-indigo-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+              = link_to "Plantations", "https://somber-squid-78b.notion.site/fc7a6ebcb83b483ea7d003c787337c20?v=f302b624b2d24fff809afe3b6cc7b6ed", class: "inline-flex items-center rounded-md border border-transparent bg-indigo-100 px-3 py-2 text-sm font-medium leading-4 text-indigo-700 hover:bg-indigo-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+
+      / Eghezée
+      .flex.flex-col.overflow-hidden.rounded-lg.shadow-lg(data-controller="modal")
         .flex-shrink-0
-          = image_tag "designs/foret-jardin-bolinne.jpg", alt: "", class: "h-48 w-full object-cover"
+          a(href="#" data-action="click->modal#open")
+            = image_tag "designs/design-permaculture-bolinne.png", alt: "", class: "h-full w-full object-cover"
+          .hidden.animated.fadeIn.fixed.inset-0.overflow-y-auto.flex.items-center.justify-center data-action=("click->modal#closeBackground keyup@window->modal#closeWithKeyboard") data-modal-target="container" style=("z-index: 9999;")
+            .max-h-screen.w-full.max-w-2xl.relative
+              .m-1.bg-white.rounded.shadow
+                .p-2
+                  = image_tag "designs/design-permaculture-bolinne.png", alt: "", class: "h-full w-full object-cover"
         .flex.flex-1.flex-col.justify-between.bg-white.p-6
           .flex-1
-            p.text-sm.font-medium.text-indigo-600
-              a.hover:underline href="#" Eghezée, Belgique
-            a.mt-2.block href="#"
-            p.text-xl.font-semibold.text-gray-900 Labo multi-étagé
+            p.text-sm.font-medium.text-semisto-1 Eghezée, Belgique
+            p.mt-2.text-xl.font-semibold.text-gray-900 Labo multi-étagé
             p.mt-3.text-base.text-gray-500 Jardin multi-étagé expérimental de 6 ares, initié en 2018 à partir d'un pré. Terrain de jeu pour découvrir les plantes, le sol et les interactions avec l'écosystème.
+            .flex.mt-4.space-x-2
+              = link_to "Design", asset_url("designs/design-permaculture-bolinne.png"), onclick: "window.open(this.href); return false;", class: "inline-flex items-center rounded-md border border-transparent bg-indigo-100 px-3 py-2 text-sm font-medium leading-4 text-indigo-700 hover:bg-indigo-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+              = link_to "Plantations", "https://somber-squid-78b.notion.site/5ef9c172fa4646f0b390a85a2534c16a?v=2d94f12335f240f0ab029e3c8e4fe685", class: "inline-flex items-center rounded-md border border-transparent bg-indigo-100 px-3 py-2 text-sm font-medium leading-4 text-indigo-700 hover:bg-indigo-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
