@@ -4,7 +4,32 @@
       h2.text-4xl.font-bold.tracking-tight.text-gray-900.sm:text-5xl.lg:text-6xl Bureau d'études
       p.mt-5.text-xl.text-gray-500 Conception de forêts comestibles, forêts-jardins et jardins multi-étagés
 
-.relative.bg-gray-50.px-4.pb-20.sm:px-6.lg:px-8.lg:pb-28
+.relative.bg-white
+  .lg:absolute.lg:inset-0
+    .lg:absolute.lg:inset-y-0.lg:left-0 class="lg:w-1/2"
+      = image_tag "foret-jardin-belgique.jpg", alt: "Conception de forêts-jardins en Belgique", class: "h-56 w-full object-cover lg:absolute lg:h-full"
+  .relative.px-4.pt-12.pb-16.sm:px-6.sm:pt-16.lg:mx-auto.lg:grid.lg:max-w-7xl.lg:grid-cols-2.lg:px-8
+    .lg:col-start-2.lg:pl-8
+      .mx-auto.max-w-prose.text-base.lg:ml-auto.lg:mr-0.lg:max-w-lg
+        h2.font-semibold.leading-6.text-indigo-600 Votre forêt-jardin
+        h3.mt-2.text-3xl.font-bold.leading-8.tracking-tight.text-gray-900.sm:text-4xl Un processus permaculturel
+        p.mt-8.text-lg.text-gray-500 Nous analysons votre projet et vous faisons une proposition en phase avec la vision du ou des porteurs de projet et dans le respect de la biodiversité.
+        .prose.prose-indigo.mt-5.text-gray-500
+          ul(role="list")
+            li <strong>Traduire les envies et besoins des porteurs du projet</strong>: autonomie, beauté, paix intérieure, intérêt pédagogique, arbres et plantes préférés, récoltes déjà possibles dans le réseau, etc.
+            li <strong>Préparer le terrain</strong> pour accueillir les plantes et la biodiversité.
+            li <strong>Sélectionner les plantes et les agencer</strong> de manière à rendre le jardin-forêt pérenne et résilient.
+            li Trouver les plantes, organiser la plantation et <strong>planter</strong> avec bienveillance.
+            li <strong>Suivre l'évolution</strong> des plantes et les entretenir.
+            li <strong>Documenter</strong> les usages possibles de chaque plante.
+            li <strong>Récolter</strong>, récolter, récolter!
+            li <strong>Stocker</strong> les surplus et <strong>partager</strong>.
+
+          h3 Chaque projet est unique
+
+          p Une page web privée est mise à disposition de chacun de nos clients. On y retrouve une multitude d'informations utiles, le design commenté en vidéo et le détail des plantations.
+
+.relative.mt-12.bg-gray-50.px-4.pb-20.sm:px-6.lg:px-8.lg:pb-28
   .absolute.inset-0
     .bg-white class=("h-1/3 sm:h-2/3")
   .relative.mx-auto.max-w-7xl
@@ -119,3 +144,12 @@
             .flex.mt-4.space-x-2
               = link_to "Design", asset_url("designs/design-permaculture-bolinne.png"), onclick: "window.open(this.href); return false;", class: "inline-flex items-center rounded-md border border-transparent bg-indigo-100 px-3 py-2 text-sm font-medium leading-4 text-indigo-700 hover:bg-indigo-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
               = link_to "Plantations", "https://somber-squid-78b.notion.site/5ef9c172fa4646f0b390a85a2534c16a?v=2d94f12335f240f0ab029e3c8e4fe685", class: "inline-flex items-center rounded-md border border-transparent bg-indigo-100 px-3 py-2 text-sm font-medium leading-4 text-indigo-700 hover:bg-indigo-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+
+.bg-indigo-50
+  .mx-auto.max-w-7xl.py-12.px-4.sm:px-6.lg:flex.lg:items-center.lg:justify-between.lg:py-24.lg:px-8
+    h2.text-3xl.font-bold.tracking-tight.text-gray-900.md:text-4xl
+      span.block Prêt à planter l'abondance?
+      span.block.text-indigo-600 Inscrivez-vous sur notre liste d'attente de projets.
+    .mt-8.flex.lg:mt-0.lg:flex-shrink-0
+      .inline-flex.rounded-md.shadow
+        a.inline-flex.items-center.justify-center.rounded-md.border.border-transparent.bg-semisto-3.px-5.py-3.text-base.font-medium.text-white.hover:bg-indigo-700 href="#" Je m'inscris
