@@ -39,6 +39,7 @@ module.exports = {
       },
       fontFamily: {
         sans: ['Inter', ...defaultTheme.fontFamily.sans],
+        serif: ['Vesper Libre', ...defaultTheme.fontFamily.serif]
       },
     },
   },
