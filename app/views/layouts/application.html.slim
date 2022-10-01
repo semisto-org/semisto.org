@@ -3,7 +3,7 @@ html(lang="#{I18n.locale}")
   head
     = render 'shared/head'
   body
-    .relative.overflow-hidden.bg-white
+    .relative.overflow-hidden
       / .hidden.lg:absolute.lg:inset-0.lg:block aria-hidden="true"
         svg.absolute.top-0.translate-x-64.-translate-y-8.transform class="left-1/2" fill="none" height="784" viewbox=("0 0 640 784") width="640"
           defs
@@ -12,7 +12,11 @@ html(lang="#{I18n.locale}")
           rect.text-gray-50 fill="currentColor" height="640" width="640" y="72" /
           rect fill="url(#9ebea6f4-a1f5-4d96-8c4e-4c2abf658047)" height="784" width="404" x="118" /
 
-      .relative.bg-indigo-100.py-6
+      - if current_page?(root_path)
+        .absolute.inset-x-0.top-0.overflow-hidden.bg-indigo-50
+          = image_tag "semisto-2025.png", alt: _("Semisto - L'ère des forêts comestibles")
+
+      .relative.py-6.bg-white/75
         = render "shared/navbar"
 
       = render 'shared/notices'
