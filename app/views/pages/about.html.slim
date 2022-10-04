@@ -1,1 +1,75 @@
-= render "shared/under_construction"
+/ hero
+.relative.bg-gray-50
+  main.lg:relative
+    .mx-auto.w-full.max-w-7xl.pt-16.pb-20.text-center.lg:py-48.lg:text-left
+      .px-4.sm:px-8.xl:pr-16 class="lg:w-1/2"
+        h1.text-4xl.font-bold.tracking-tight.text-gray-900.sm:text-5xl.md:text-6xl.lg:text-5xl.xl:text-6xl
+          span.block.xl:inline Une équipe passionnée&nbsp;
+          span.block.text-indigo-600.xl:inline enracinée dans un sol fertile
+        p.mx-auto.mt-3.max-w-md.text-lg.text-gray-500.sm:text-xl.md:mt-5.md:max-w-3xl Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.
+    .relative.h-64.w-full.sm:h-72.md:h-96.lg:absolute.lg:inset-y-0.lg:right-0.lg:h-full class="lg:w-1/2"
+      img.absolute.inset-0.h-full.w-full.object-cover alt="" src="https://images.unsplash.com/photo-1520333789090-1afc82db536a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2102&q=80" /
+
+/ team
+.bg-white
+  .mx-auto.max-w-7xl.py-12.px-4.sm:px-6.lg:px-8.lg:py-24
+    .space-y-12.lg:grid.lg:grid-cols-3.lg:gap-8.lg:space-y-0
+      .space-y-5.sm:space-y-4
+        h2.text-3xl.font-bold.tracking-tight.sm:text-4xl Notre équipe
+        p.text-xl.text-gray-500 Nulla quam felis, enim faucibus proin velit, ornare id pretium. Augue ultrices sed arcu condimentum vestibulum suspendisse. Volutpat eu faucibus vivamus eget bibendum cras.
+      .lg:col-span-2
+        ul.space-y-12.sm:grid.sm:grid-cols-2.sm:gap-x-6.sm:gap-y-12.sm:space-y-0.lg:gap-x-8 role="list"
+          li
+            .space-y-4
+              .aspect-w-3.aspect-h-2
+                img.rounded-lg.object-cover.shadow-lg alt="" src="https://images.unsplash.com/photo-1505840717430-882ce147ef2d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80" /
+              .space-y-1.text-lg.font-medium.leading-6
+                h3 Michael Hulet
+                p.text-indigo-600 Chef d'orchestre
+              .text-lg
+                p.text-gray-500 Ultricies massa malesuada viverra cras lobortis. Tempor orci hac ligula dapibus mauris sit ut eu. Eget turpis urna maecenas cras. Nisl dictum.
+              ul.flex.space-x-5 role="list"
+                li
+                  a.text-gray-400.hover:text-gray-500 href="https://twitter.com/mhulet"
+                    span.sr-only Twitter
+                    = render partial: "shared/icons/twitter"
+                li
+                  a.text-gray-400.hover:text-gray-500 href="https://www.linkedin.com/in/michaelhulet/"
+                    span.sr-only LinkedIn
+                    = render partial: "shared/icons/linkedin"
+          li
+            .space-y-4
+              .aspect-w-3.aspect-h-2
+                img.rounded-lg.object-cover.shadow-lg alt="" src="https://images.unsplash.com/photo-1505840717430-882ce147ef2d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80" /
+              .space-y-1.text-lg.font-medium.leading-6
+                h3 Claude Corbesier
+                p.text-indigo-600 Coordinatrice de formations
+              .text-lg
+                p.text-gray-500 Ultricies massa malesuada viverra cras lobortis. Tempor orci hac ligula dapibus mauris sit ut eu. Eget turpis urna maecenas cras. Nisl dictum.
+              ul.flex.space-x-5 role="list"
+                li
+                  a.text-gray-400.hover:text-gray-500 href="#"
+                    span.sr-only Twitter
+                    = render partial: "shared/icons/twitter"
+                li
+                  a.text-gray-400.hover:text-gray-500 href="#"
+                    span.sr-only LinkedIn
+                    = render partial: "shared/icons/linkedin"
+          li
+            .space-y-4
+              .aspect-w-3.aspect-h-2
+                img.rounded-lg.object-cover.shadow-lg alt="" src="https://images.unsplash.com/photo-1505840717430-882ce147ef2d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80" /
+              .space-y-1.text-lg.font-medium.leading-6
+                h3 Laurence Duez
+                p.text-indigo-600 Formatrice
+              .text-lg
+                p.text-gray-500 Ultricies massa malesuada viverra cras lobortis. Tempor orci hac ligula dapibus mauris sit ut eu. Eget turpis urna maecenas cras. Nisl dictum.
+              ul.flex.space-x-5 role="list"
+                li
+                  a.text-gray-400.hover:text-gray-500 href="#"
+                    span.sr-only Twitter
+                    = render partial: "shared/icons/twitter"
+                li
+                  a.text-gray-400.hover:text-gray-500 href="#"
+                    span.sr-only LinkedIn
+                    = render partial: "shared/icons/linkedin"

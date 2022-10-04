@@ -17,7 +17,7 @@
       = image_tag "semisto-2025.png", alt: "Semisto - L'ère des forêts comestibles", class: "relative rounded-lg shadow-lg"
 
 .relative.pb-16.sm:pb-24.lg:pb-32
-  main.mx-auto.max-w-7xl.px-4.sm:mt-24.sm:px-6
+  main.mx-auto.max-w-7xl.px-4.sm:mt-24.sm:px-6.lg:mt-0
     .lg:grid.lg:grid-cols-12.lg:gap-8
       .sm:text-center.md:mx-auto.md:max-w-2xl.lg:col-span-6.lg:text-left
 
@@ -115,7 +115,9 @@
         div
           .mt-6
             h2.text-5xl.tracking-tight.font-serif.text-gray-900 = _("Bureau d'études")
-            p.mt-4.text-lg.text-gray-500 Semper curabitur ullamcorper posuere nunc sed. Ornare iaculis bibendum malesuada faucibus lacinia porttitor. Pulvinar laoreet sagittis viverra duis. In venenatis sem arcu pretium pharetra at. Lectus viverra dui tellus ornare pharetra.
+            p.mt-4.text-lg.text-gray-500
+              | Nous concevons en équipe des forêts-jardins qui répondent à vos besoins et qui respectent votre vision.&nbsp;
+              span.font-bold Les projets sont actuellement sur liste d'attente.
             .mt-6
               = link_to _("Le bureau d'études"), design_path, class: "btn-primary"
         / .mt-8.border-t.border-gray-200.pt-6
@@ -137,7 +139,7 @@
         div
           .mt-6
             h2.text-5xl.font-serif.tracking-tight.text-gray-900 = _("Agence de communication")
-            p.mt-4.text-lg.text-gray-500 Semper curabitur ullamcorper posuere nunc sed. Ornare iaculis bibendum malesuada faucibus lacinia porttitor. Pulvinar laoreet sagittis viverra duis. In venenatis sem arcu pretium pharetra at. Lectus viverra dui tellus ornare pharetra.
+            p.mt-4.text-lg.text-gray-500 Nous diffusons le concept de forêt-jardin sur les réseaux sociaux et dans les médias.
             .mt-6
               = link_to _("L'agence de communication"), agency_path, class: "btn-primary"
       .mt-12.sm:mt-16.lg:col-start-1.lg:mt-0
@@ -150,9 +152,9 @@
         div
           .mt-6
             h2.text-5xl.tracking-tight.font-serif.text-gray-900 = _("Food Forest Heroes 🦸‍♂️")
-            p.mt-4.text-lg.text-gray-500 Semper curabitur ullamcorper posuere nunc sed. Ornare iaculis bibendum malesuada faucibus lacinia porttitor. Pulvinar laoreet sagittis viverra duis. In venenatis sem arcu pretium pharetra at. Lectus viverra dui tellus ornare pharetra.
+            p.mt-4.text-lg.text-gray-500 Nous plantons joyeusement des milliers d'arbres nourriciers au rythme des meilleurs DJ, et nous célébrons nos chantiers réunis sous le Chapiteau des Héros.
             .mt-6
-              = link_to _("En savoir plus"), heroes_path, class: "btn-primary"
+              = link_to _("WAW! En savoir plus"), heroes_path, class: "btn-primary"
         / .mt-8.border-t.border-gray-200.pt-6
           blockquote
             div
