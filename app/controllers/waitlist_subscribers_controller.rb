@@ -8,7 +8,9 @@ class WaitlistSubscribersController < ApplicationController
       waitlist: waitlist
     )
     if @waitlist_subscriber.save
-      NotifyWaitlistSubscriberJob.perform_later(@waitlist_subscriber.id)
+      NotifyWaitlistSubscriberJob
+        .set(wait: 25.minutes)
+        .perform_later(@waitlist_subscriber.id)
       redirect_to @waitlist_subscriber,
                   notice: _("Merci pour votre inscription sur notre liste.")
     else

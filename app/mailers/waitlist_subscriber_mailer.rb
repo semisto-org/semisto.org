@@ -3,7 +3,7 @@ class WaitlistSubscriberMailer < ApplicationMailer
     @waitlist_subscriber = waitlist_subscriber
     mail(
       to: waitlist_subscriber.email,
-      from: "Michael Hulet, Semisto <michael@semisto.org>",
+      from: email_address_with_name("michael@semisto.org", "Michael Hulet, Semisto"),
       subject: "Merci pour votre intérêt pour les formations Semisto"
     )
   end
