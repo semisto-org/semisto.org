@@ -12,6 +12,7 @@
 
 ActiveRecord::Schema[7.0].define(version: 2022_11_01_054107) do
   # These are extensions that must be enabled in order to support this database
+  enable_extension "pgcrypto"
   enable_extension "plpgsql"
 
   create_table "active_storage_attachments", force: :cascade do |t|
@@ -104,7 +105,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_01_054107) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  create_table "waitlist_subscribers", force: :cascade do |t|
+  create_table "waitlist_subscribers", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
     t.string "email"
     t.bigint "waitlist_id", null: false
     t.string "origin"
