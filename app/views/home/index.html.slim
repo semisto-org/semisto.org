@@ -1,5 +1,8 @@
-.mt-96 &nbsp;
-.relative.overflow-hidden.mt-48
+- content_for :meta_title, _("L'ère des forêts comestibles")
+
+/ .mt-96 &nbsp;
+/ .relative.overflow-hidden.mt-48
+/ .relative.overflow-hidden
   .relative.pt-6.sm:pb-24
     .mx-auto.mt-16.max-w-3xl.px-4.sm:mt-24.sm:px-6
       .text-center.bg-white.rounded.p-8
@@ -8,10 +11,6 @@
           / span.block.text-indigo-600 online business
         p.mx-auto.mt-3.max-w-md.text-base.text-gray-500.sm:text-lg.md:mt-5.md:max-w-3xl.md:text-xl
           | Formations &bull; Conception &bull; Plantations &bull; Gestion
-          br
-          | Agence de communication &bull; Financements
-          br
-          |
   / .relative
     .mx-auto.w-full.px-4.sm:px-6
       = image_tag "semisto-2025.png", alt: "Semisto - L'ère des forêts comestibles", class: "relative rounded-lg shadow-lg"
@@ -35,23 +34,23 @@
             span.flex.text-semisto-3
               / svg.w-12.h-12 fill="none" stroke="currentColor" stroke-width="1.5" viewbox=("0 0 24 24") xmlns="http://www.w3.org/2000/svg"
                 path d=("M4.5 12.75l6 6 9-13.5") stroke-linecap="round" stroke-linejoin="round" /
-              = _("Forêts-jardins")
-              | ,
+              = _("En route vers")
             span.flex.text-semisto-2
               / svg.w-12.h-12 fill="none" stroke="currentColor" stroke-width="1.5" viewbox=("0 0 24 24") xmlns="http://www.w3.org/2000/svg"
                 path d=("M4.5 12.75l6 6 9-13.5") stroke-linecap="round" stroke-linejoin="round" /
-              = _("Forêts comestibles")
-              | ,
-            span.flex.text-semisto-1
+              = _("l'ère des forêts comestibles")
+            / span.flex.text-semisto-1
               / svg.w-12.h-12 fill="none" stroke="currentColor" stroke-width="1.5" viewbox=("0 0 24 24") xmlns="http://www.w3.org/2000/svg"
                 path d=("M4.5 12.75l6 6 9-13.5") stroke-linecap="round" stroke-linejoin="round" /
               = _("Jardins multi-étagés")
-        p.mt-3.text-base.text-gray-500.sm:mt-5.sm:text-xl.lg:text-lg.xl:text-xl = _("Semisto donne les moyens aux générations présentes et futures de transformer l’Europe en forêts-jardins et forêts comestibles : des écosystèmes résilients à impact ultra-positif pour les humains, le sol et la biodiversité, pour nourrir l’humanité et régénérer la biosphère.")
+        p.mt-3.text-base.text-gray-500.sm:mt-5.sm:text-xl.lg:text-lg.xl:text-xl = _("Semisto donne les moyens aux générations présentes et futures de transformer rues, champs et jardins en paysages comestibles : des écosystèmes résilients à impact ultra-positif pour les humains, le sol et la biodiversité, pour nourrir l’humanité et régénérer la biosphère.")
         .mt-8.sm:mx-auto.sm:max-w-lg.sm:text-center.lg:mx-0.lg:text-left
           p.text-base.font-medium.text-gray-900 = _("Nos formations démarrerons en 2023. Envie d'en savoir plus? Inscrivez-vous pour que nous vous tenions au courant.")
-          form.mt-3.sm:flex action="#" method="POST"
-            label.sr-only for="email" = _("Adresse email")
-            input#email.block.w-full.rounded-md.border-gray-300.py-3.text-base.placeholder-gray-500.shadow-sm.focus:border-indigo-500.focus:ring-indigo-500.sm:flex-1 name="email" placeholder=("#{_("Mon adresse email")}") type="email" /
+          = form_with model: @waitlist_subscriber, id: dom_id(@waitlist_subscriber), class: "mt-3 sm:flex" do |f|
+            = f.fields_for :waitlist do |fw|
+              = fw.hidden_field :slug, value: f.object.waitlist.slug
+            = f.label :email, _("Adresse email"), class: "sr-only"
+            = f.text_field :email, required: true, autocomplete: "email", placeholder: _("Mon adresse email"), class: "block w-full rounded-md border-gray-300 py-3 text-base placeholder-gray-500 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:flex-1"
             button.btn-primary.mt-3.sm:mt-0.sm:ml-3 type="submit" = _("Tenez-moi au courant")
           p.mt-3.text-sm.text-gray-500
             = _("Nous prenons soin de vos données. Consultez notre")
@@ -96,7 +95,7 @@
         .-mr-48.pl-4.sm:pl-6.md:-mr-16.lg:relative.lg:m-0.lg:h-full.lg:px-0
           / img.w-full.rounded-xl.shadow-xl.ring-1.ring-black.ring-opacity-5.lg:absolute.lg:left-0.lg:h-full.lg:w-auto.lg:max-w-none alt=("Inbox user interface") src="https://tailwindui.com/img/component-images/inbox-app-screenshot-1.jpg" /
           = image_tag "hubs/large/formations.jpg", alt: "", class: "w-full lg:absolute lg:right-0 lg:h-full lg:w-auto lg:max-w-none"
-  .mt-24
+  / .mt-24
     .lg:mx-auto.lg:grid.lg:max-w-7xl.lg:grid-flow-col-dense.lg:grid-cols-2.lg:gap-24.lg:px-8
       .mx-auto.max-w-xl.px-4.sm:px-6.lg:col-start-2.lg:mx-0.lg:max-w-none.lg:py-32.lg:px-0
         div
@@ -133,7 +132,7 @@
         .-mr-48.pl-4.sm:pl-6.md:-mr-16.lg:relative.lg:m-0.lg:h-full.lg:px-0
           / img.w-full.rounded-xl.shadow-xl.ring-1.ring-black.ring-opacity-5.lg:absolute.lg:left-0.lg:h-full.lg:w-auto.lg:max-w-none alt=("Inbox user interface") src="https://tailwindui.com/img/component-images/inbox-app-screenshot-1.jpg" /
           = image_tag "hubs/large/bureau.jpg", alt: "", class: "w-full lg:absolute lg:right-0 lg:h-full lg:w-auto lg:max-w-none"
-  .mt-24
+  / .mt-24
     .lg:mx-auto.lg:grid.lg:max-w-7xl.lg:grid-flow-col-dense.lg:grid-cols-2.lg:gap-24.lg:px-8
       .mx-auto.max-w-xl.px-4.sm:px-6.lg:col-start-2.lg:mx-0.lg:max-w-none.lg:py-32.lg:px-0
         div
@@ -168,7 +167,7 @@
         .-mr-48.pl-4.sm:pl-6.md:-mr-16.lg:relative.lg:m-0.lg:h-full.lg:px-0
           / img.w-full.rounded-xl.shadow-xl.ring-1.ring-black.ring-opacity-5.lg:absolute.lg:left-0.lg:h-full.lg:w-auto.lg:max-w-none alt=("Inbox user interface") src="https://tailwindui.com/img/component-images/inbox-app-screenshot-1.jpg" /
           = image_tag "hubs/large/heroes.jpg", alt: "", class: "w-full lg:absolute lg:right-0 lg:h-full lg:w-auto lg:max-w-none"
-  .mt-24
+  / .mt-24
     .lg:mx-auto.lg:grid.lg:max-w-7xl.lg:grid-flow-col-dense.lg:grid-cols-2.lg:gap-24.lg:px-8
       .mx-auto.max-w-xl.px-4.sm:px-6.lg:col-start-2.lg:mx-0.lg:max-w-none.lg:py-32.lg:px-0
         div
@@ -182,7 +181,7 @@
           / img.w-full.rounded-xl.shadow-xl.ring-1.ring-black.ring-opacity-5.lg:absolute.lg:right-0.lg:h-full.lg:w-auto.lg:max-w-none alt=("Customer profile user interface") src="https://tailwindui.com/img/component-images/inbox-app-screenshot-2.jpg" /
           = image_tag "hubs/large/financement.jpg", alt: "", class: "w-full lg:absolute lg:left-0 lg:h-full lg:w-auto lg:max-w-none"
 
-.bg-white.py-16.sm:py-24
+/ .bg-white.py-16.sm:py-24
   .relative.sm:py-16
     .mx-auto.max-w-md.px-4.sm:max-w-3xl.sm:px-6.lg:max-w-7xl.lg:px-8
       .relative.overflow-hidden.rounded-2xl.bg-semisto-3.px-6.py-10.shadow-xl.sm:px-12.sm:py-20

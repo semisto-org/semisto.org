@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_09_09_194121) do
+ActiveRecord::Schema[7.0].define(version: 2022_11_01_054107) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -104,7 +104,25 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_09_194121) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  create_table "waitlist_subscribers", force: :cascade do |t|
+    t.string "email"
+    t.bigint "waitlist_id", null: false
+    t.string "origin"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["waitlist_id"], name: "index_waitlist_subscribers_on_waitlist_id"
+  end
+
+  create_table "waitlists", force: :cascade do |t|
+    t.string "name"
+    t.string "slug"
+    t.boolean "active"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
   add_foreign_key "services", "users"
+  add_foreign_key "waitlist_subscribers", "waitlists"
 end
