@@ -1,1 +1,81 @@
-= render "shared/under_construction"
+- content_for :meta_title, _("Food Forest Heroes - Des forêts comestibles en entreprise")
+
+.bg-white
+  .mx-auto.max-w-7xl.py-8.px-4.sm:py-12.sm:px-6.lg:flex.lg:justify-between.lg:px-8
+    .max-w-7xl
+      h2.text-4xl.font-bold.tracking-tight.text-gray-900.sm:text-5xl.lg:text-6xl Food Forest Heroes
+      p.mt-5.text-xl.text-gray-500 Co-création de forêts comestibles en entreprise 🚀🌱
+
+.relative.overflow-hidden.bg-white.pt-16.pb-32
+  .relative
+    .lg:mx-auto.lg:grid.lg:max-w-7xl.lg:grid-flow-col-dense.lg:grid-cols-2.lg:gap-24.lg:px-8
+      .mx-auto.max-w-xl.px-6.lg:mx-0.lg:max-w-none.lg:py-16.lg:px-0
+        div
+          div
+            span.flex.h-12.w-12.items-center.justify-center.rounded-xl.bg-indigo-600
+              svg.h-8.w-8.text-white aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" viewbox=("0 0 24 24") xmlns="http://www.w3.org/2000/svg"
+                path d=("M9.53 16.122a3 3 0 00-5.78 1.128 2.25 2.25 0 01-2.4 2.245 4.5 4.5 0 008.4-2.245c0-.399-.078-.78-.22-1.128zm0 0a15.998 15.998 0 003.388-1.62m-5.043-.025a15.994 15.994 0 011.622-3.395m3.42 3.42a15.995 15.995 0 004.764-4.648l3.876-5.814a1.151 1.151 0 00-1.597-1.597L14.146 6.32a15.996 15.996 0 00-4.649 4.763m3.42 3.42a6.776 6.776 0 00-3.42-3.42") stroke-linecap="round" stroke-linejoin="round" /
+          .mt-6
+            h2.text-3xl.font-bold.tracking-tight.text-gray-900 Concevoir, ensemble
+            p.mt-4.text-lg.text-gray-500 Nous co-créons une forêt comestible avec les employés de l'entreprise en utilisant des jeux de cartes représentant les différentes plantes envisagées à tous les étages: herbacées, arbustes, arbres et grimpantes. Le résultat est un design partageable au sein de l'entreprise et avec les clients.
+        / .mt-8.border-t.border-gray-200.pt-6
+          blockquote
+            div
+              p.text-base.text-gray-500 &ldquo;L'accès facile à cette liste depuis mon smartphone m'a permis de suivre régulièrement la "chasse aux plants" de Semisto jusqu'à la livraison.&rdquo;
+            footer.mt-3
+              .flex.items-center.space-x-3
+                / .flex-shrink-0
+                  img.h-6.w-6.rounded-full alt="" src="https://images.unsplash.com/photo-1509783236416-c9ad59bae472?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80" /
+                .text-base.font-medium.text-gray-700 Emmanuel, client Semisto
+      .mt-12.sm:mt-16.lg:mt-0
+        .-mr-48.pl-4.sm:pl-6.md:-mr-16.lg:relative.lg:m-0.lg:h-full.lg:px-0
+          = image_tag "caragana-foret-jardin.jpg", alt: _("Le jeu Caragana de l'Université des Alvéoles"), class: "w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:left-0 lg:h-full lg:w-auto lg:max-w-none"
+  .mt-24
+    .lg:mx-auto.lg:grid.lg:max-w-7xl.lg:grid-flow-col-dense.lg:grid-cols-2.lg:gap-24.lg:px-8
+      .mx-auto.max-w-xl.px-6.lg:col-start-2.lg:mx-0.lg:max-w-none.lg:py-32.lg:px-0
+        div
+          div
+            span.flex.h-12.w-12.items-center.justify-center.rounded-xl.bg-indigo-600
+              svg.h-8.w-8.text-white aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" viewbox=("0 0 24 24") xmlns="http://www.w3.org/2000/svg"
+                path d=("M15.59 14.37a6 6 0 01-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 006.16-12.12A14.98 14.98 0 009.631 8.41m5.96 5.96a14.926 14.926 0 01-5.841 2.58m-.119-8.54a6 6 0 00-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 00-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 01-2.448-2.448 14.9 14.9 0 01.06-.312m-2.24 2.39a4.493 4.493 0 00-1.757 4.306 4.493 4.493 0 004.306-1.758M16.5 9a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z") stroke-linecap="round" stroke-linejoin="round" /
+          .mt-6
+            h2.text-3xl.font-bold.tracking-tight.text-gray-900 Des plantations festives 👨‍🎤🎶
+            p.mt-4.text-lg.text-gray-500 Planter toutes ces plantes qui auront un réel impact sur le quotidien de l'entreprise sont un événement que nous célébrons en bonne et due forme, avec une plantation en musique et une grande fête pour tous les employés, partenaires et clients!
+            / .mt-6
+              a.inline-flex.rounded-lg.bg-indigo-600.px-4.text-base.font-semibold.leading-7.text-white.shadow-sm.ring-1.ring-indigo-600.hover:bg-indigo-700.hover:ring-indigo-700 class="py-1.5" href="#"  Get started
+      .mt-12.sm:mt-16.lg:col-start-1.lg:mt-0
+        .-ml-48.pr-4.sm:pr-6.md:-ml-16.lg:relative.lg:m-0.lg:h-full.lg:px-0
+          = image_tag "team-building.jpg", alt: _("Team Building: planter une forêt comestible en entreprise"), class: "w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:right-0 lg:h-full lg:w-auto lg:max-w-none"
+  .relative.mt-16
+    .lg:mx-auto.lg:grid.lg:max-w-7xl.lg:grid-flow-col-dense.lg:grid-cols-2.lg:gap-24.lg:px-8
+      .mx-auto.max-w-xl.px-6.lg:mx-0.lg:max-w-none.lg:py-16.lg:px-0
+        div
+          div
+            span.flex.h-12.w-12.items-center.justify-center.rounded-xl.bg-indigo-600
+              svg.h-8.w-8.text-white aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" viewbox=("0 0 24 24") xmlns="http://www.w3.org/2000/svg"
+                path d=("M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5m-9-6h.008v.008H12v-.008zM12 15h.008v.008H12V15zm0 2.25h.008v.008H12v-.008zM9.75 15h.008v.008H9.75V15zm0 2.25h.008v.008H9.75v-.008zM7.5 15h.008v.008H7.5V15zm0 2.25h.008v.008H7.5v-.008zm6.75-4.5h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V15zm0 2.25h.008v.008h-.008v-.008zm2.25-4.5h.008v.008H16.5v-.008zm0 2.25h.008v.008H16.5V15z") stroke-linecap="round" stroke-linejoin="round" /
+          .mt-6
+            h2.text-3xl.font-bold.tracking-tight.text-gray-900 Une co-gestion pendant 5 ans
+            p.mt-4.text-lg.text-gray-500 Nous co-gérons avec les employés la forêt comestible pendant 5 ans afin d'assurer la résilience de ce magnifique écosystème et de lancer le mouvement des récoltes.
+        / .mt-8.border-t.border-gray-200.pt-6
+          blockquote
+            div
+              p.text-base.text-gray-500 &ldquo;L'accès facile à cette liste depuis mon smartphone m'a permis de suivre régulièrement la "chasse aux plants" de Semisto jusqu'à la livraison.&rdquo;
+            footer.mt-3
+              .flex.items-center.space-x-3
+                / .flex-shrink-0
+                  img.h-6.w-6.rounded-full alt="" src="https://images.unsplash.com/photo-1509783236416-c9ad59bae472?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80" /
+                .text-base.font-medium.text-gray-700 Emmanuel, client Semisto
+      .mt-12.sm:mt-16.lg:mt-0
+        .-mr-48.pl-4.sm:pl-6.md:-mr-16.lg:relative.lg:m-0.lg:h-full.lg:px-0
+          = image_tag "recolte-de-baies.jpg", alt: _("Les premières récoltes de la forêt comestible"), class: "w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:left-0 lg:h-full lg:w-auto lg:max-w-none"
+
+
+.bg-indigo-50
+  .mx-auto.max-w-7xl.py-12.px-4.sm:px-6.lg:flex.lg:items-center.lg:justify-between.lg:py-24.lg:px-8
+    h2.text-3xl.font-bold.tracking-tight.text-gray-900.md:text-4xl
+      span.block Prêt planter l'abondance dans votre entreprise?
+      span.block.text-indigo-600 Parlons-en de vive voix!
+    .mt-8.flex.lg:mt-0.lg:flex-shrink-0
+      .inline-flex.rounded-md.shadow
+        = link_to "Nous contacter", new_contact_path, class: "inline-flex items-center justify-center rounded-md border border-transparent bg-semisto-3 px-5 py-3 text-base font-medium text-white hover:bg-indigo-700"

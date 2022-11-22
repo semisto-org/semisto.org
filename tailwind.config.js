@@ -29,6 +29,8 @@ module.exports = {
         secondary: colors.emerald,
         tertiary: colors.gray,
         danger: colors.red,
+        teal: colors.teal,
+        cyan: colors.cyan,
         "code-400": "#fefcf9",
         "code-600": "#3c455b",
         "semisto-1": "#927AA3",

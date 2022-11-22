@@ -1,17 +1,11 @@
 class HubsController < ApplicationController
-  def agency
-  end
-
   def design
-  end
-
-  def funding
   end
 
   def heroes
   end
 
-  def nursery
+  def plants_hunter
   end
 
   def trainings

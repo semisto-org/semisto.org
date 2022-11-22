@@ -1,8 +1,12 @@
 footer.bg-semisto-4 aria-labelledby="footer-heading"
   h2#footer-heading.sr-only = _("Pied de page")
   .mx-auto.max-w-7xl.py-12.px-4.sm:px-6.lg:py-16.lg:px-8
+    .flex.mb-6.items-center
+      = link_to root_path do
+        = image_tag "logo-s.png", alt: _("Semisto - Forêts comestibles, jardins-forêts et forêts-jardins"), class: "h-10"
+      p.ml-4.text-base.opacity-50.text-white.lg:text-xl = _("En route vers l'ère des forêts comestibles")
     .xl:grid.xl:grid-cols-2.xl:gap-8
-      .grid.grid-cols-2.gap-8.xl:col-span-3
+      .grid.grid-cols-1.gap-8.md:grid-cols-2.xl:col-span-3
         .md:grid.md:grid-cols-2.md:gap-8
           div
             h3.font-light.text-white = _("Pôles")
@@ -21,14 +25,14 @@ footer.bg-semisto-4 aria-labelledby="footer-heading"
                 = link_to _("Agence de communication"), agency_path, class: "text-base text-white hover:text-gray-200"
               / li
                 = link_to _("Financement de plantations"), funding_hub_path, class: "text-base text-white hover:text-gray-200"
-          .mt-12.md:mt-0
+          .mt-6.md:mt-0
             h3.font-light.text-white = _("S'informer")
             ul.mt-4.space-y-4 role="list"
               li
                 = link_to _("A propos de Semisto"), about_path, class: "text-base text-white hover:text-gray-200"
               li
                 = link_to _("L'ère des forêts comestibles"), food_forests_path, class: "text-base text-white hover:text-gray-200"
-              li
+              / li
                 = link_to _("We ❤️ open source"), open_source_path, class: "text-base text-white hover:text-gray-200"
               li
                 = link_to _("Nous contacter"), new_contact_path, class: "text-base text-white hover:text-gray-200"
@@ -46,7 +50,7 @@ footer.bg-semisto-4 aria-labelledby="footer-heading"
                 a.text-base.text-gray-500.hover:text-gray-900 href="#" = _("Presse")
               li
                 a.text-base.text-gray-500.hover:text-gray-900 href="#" = _("Partenaires")
-          .mt-12.md:mt-0
+          .mt-6.md:mt-0
             h3.font-light.text-white = _("La newsletter de Semisto")
             p.mt-4.text-base.text-white = _("Suivre l'évolution du projet et être averti rapidement des nouveautés.")
             form.mt-4.sm:flex.sm:max-w-md

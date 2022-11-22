@@ -78,8 +78,8 @@
       .mx-auto.max-w-xl.px-4.sm:px-6.lg:mx-0.lg:max-w-none.lg:py-16.lg:px-0
         div
           .mt-6
-            h2 = _("Formations")
-            p.mt-4.text-lg.text-gray-500 = _("Apprendre à faire naitre votre forêt-jardin et à l'entretenir jusqu'à ce qu'elle vous apporte ses plus belles récoltes. Ou apprendre un nouveau métier et devenir concepteur de paysages comestibles.")
+            h2 = _("Formations 🧑🏽‍🏫")
+            p.mt-4.text-lg.text-gray-500 == _("Apprendre à <strong>faire naitre votre forêt-jardin et à l'entretenir</strong> jusqu'à ce qu'elle vous apporte ses plus belles récoltes. Ou <strong>apprendre un nouveau métier</strong> et devenir concepteur de paysages comestibles.")
             .mt-6
               = link_to _("Nos formations 2023"), trainings_path, class: "btn-primary"
         / .mt-8.border-t.border-gray-200.pt-6
@@ -108,15 +108,14 @@
         .-ml-48.pr-4.sm:pr-6.md:-ml-16.lg:relative.lg:m-0.lg:h-full.lg:px-0
           / img.w-full.rounded-xl.shadow-xl.ring-1.ring-black.ring-opacity-5.lg:absolute.lg:right-0.lg:h-full.lg:w-auto.lg:max-w-none alt=("Customer profile user interface") src="https://tailwindui.com/img/component-images/inbox-app-screenshot-2.jpg" /
           = image_tag "hubs/large/pepiniere.jpg", alt: "", class: "w-full lg:absolute lg:left-0 lg:h-full lg:w-auto lg:max-w-none"
-  .relative.mt-24
+  .mt-24
     .lg:mx-auto.lg:grid.lg:max-w-7xl.lg:grid-flow-col-dense.lg:grid-cols-2.lg:gap-24.lg:px-8
-      .mx-auto.max-w-xl.px-4.sm:px-6.lg:mx-0.lg:max-w-none.lg:py-16.lg:px-0
+      .mx-auto.max-w-xl.px-4.sm:px-6.lg:col-start-2.lg:mx-0.lg:max-w-none.lg:py-32.lg:px-0
         div
           .mt-6
-            h2.text-5xl.tracking-tight.font-serif.text-gray-900 = _("Bureau d'études")
+            h2.text-5xl.tracking-tight.font-serif.text-gray-900 = _("Bureau d'études 👩‍🎨")
             p.mt-4.text-lg.text-gray-500
-              | Nous concevons en équipe des forêts-jardins qui répondent à vos besoins et qui respectent votre vision.&nbsp;
-              span.font-bold Les projets sont actuellement sur liste d'attente.
+              == ("Nous concevons <strong>en équipe</strong> des forêts-jardins qui répondent à vos besoins et qui respectent votre vision.")
             .mt-6
               = link_to _("Le bureau d'études"), design_path, class: "btn-primary"
         / .mt-8.border-t.border-gray-200.pt-6
@@ -151,7 +150,7 @@
         div
           .mt-6
             h2.text-5xl.tracking-tight.font-serif.text-gray-900 = _("Food Forest Heroes 🦸‍♂️")
-            p.mt-4.text-lg.text-gray-500 Nous plantons joyeusement des milliers d'arbres nourriciers au rythme des meilleurs DJ, et nous célébrons nos chantiers réunis sous le Chapiteau des Héros.
+            p.mt-4.text-lg.text-gray-500 == _("Nous plantons joyeusement <strong>des milliers d'arbres nourriciers dans votre entreprise</strong> au rythme des meilleurs DJ, et nous célébrons nos chantiers réunis sous le Chapiteau des Food Forest Heroes.")
             .mt-6
               = link_to _("WAW! En savoir plus"), heroes_path, class: "btn-primary"
         / .mt-8.border-t.border-gray-200.pt-6
@@ -167,19 +166,19 @@
         .-mr-48.pl-4.sm:pl-6.md:-mr-16.lg:relative.lg:m-0.lg:h-full.lg:px-0
           / img.w-full.rounded-xl.shadow-xl.ring-1.ring-black.ring-opacity-5.lg:absolute.lg:left-0.lg:h-full.lg:w-auto.lg:max-w-none alt=("Inbox user interface") src="https://tailwindui.com/img/component-images/inbox-app-screenshot-1.jpg" /
           = image_tag "hubs/large/heroes.jpg", alt: "", class: "w-full lg:absolute lg:right-0 lg:h-full lg:w-auto lg:max-w-none"
-  / .mt-24
+  .mt-24
     .lg:mx-auto.lg:grid.lg:max-w-7xl.lg:grid-flow-col-dense.lg:grid-cols-2.lg:gap-24.lg:px-8
       .mx-auto.max-w-xl.px-4.sm:px-6.lg:col-start-2.lg:mx-0.lg:max-w-none.lg:py-32.lg:px-0
         div
           .mt-6
-            h2.text-5xl.font-serif.tracking-tight.text-gray-900 = _("Financements")
-            p.mt-4.text-lg.text-gray-500 Semper curabitur ullamcorper posuere nunc sed. Ornare iaculis bibendum malesuada faucibus lacinia porttitor. Pulvinar laoreet sagittis viverra duis. In venenatis sem arcu pretium pharetra at. Lectus viverra dui tellus ornare pharetra.
+            h2.text-5xl.font-serif.tracking-tight.text-gray-900 = _("Chasseurs de plants 🕵🏻‍♂️")
+            p.mt-4.text-lg.text-gray-500 == _("Votre liste de plantes est prête? Nous nous chargeons de <strong>réunir des plants de qualité</strong> et nous vous les livrons au meilleur moment.")
             .mt-6
-              = link_to _("En savoir plus"), funding_hub_path, class: "btn-primary"
+              = link_to _("En savoir plus"), plants_hunter_path, class: "btn-primary"
       .mt-12.sm:mt-16.lg:col-start-1.lg:mt-0
         .-ml-48.pr-4.sm:pr-6.md:-ml-16.lg:relative.lg:m-0.lg:h-full.lg:px-0
           / img.w-full.rounded-xl.shadow-xl.ring-1.ring-black.ring-opacity-5.lg:absolute.lg:right-0.lg:h-full.lg:w-auto.lg:max-w-none alt=("Customer profile user interface") src="https://tailwindui.com/img/component-images/inbox-app-screenshot-2.jpg" /
-          = image_tag "hubs/large/financement.jpg", alt: "", class: "w-full lg:absolute lg:left-0 lg:h-full lg:w-auto lg:max-w-none"
+          = image_tag "hubs/large/chasseur-de-plants.jpg", alt: "", class: "w-full lg:absolute lg:left-0 lg:h-full lg:w-auto lg:max-w-none"
 
 / .bg-white.py-16.sm:py-24
   .relative.sm:py-16
