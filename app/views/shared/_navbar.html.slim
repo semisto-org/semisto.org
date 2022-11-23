@@ -1,4 +1,4 @@
-div
+div(data-controller="toggle")
   nav.relative.mx-auto.flex.max-w-7xl.items-center.justify-between.px-4.sm:px-6 aria-label="Global"
     .flex.flex-1.items-center
       .flex.w-full.items-center.justify-between.md:w-auto
@@ -6,7 +6,7 @@ div
           span.sr-only Semisto
           = image_tag "logo-s.png", class: "h-8 w-auto sm:h-10", alt: ""
         .-mr-2.flex.items-center.md:hidden
-          button.inline-flex.items-center.justify-center.rounded-md.bg-white.p-2.text-gray-400.hover:bg-gray-100.hover:text-gray-500.focus:outline-none.focus:ring-2.focus:ring-inset.focus:ring-indigo-500 aria-expanded="false" type="button"
+          button.inline-flex.items-center.justify-center.rounded-md.bg-white.p-2.text-gray-400.hover:bg-gray-100.hover:text-gray-500.focus:outline-none.focus:ring-2.focus:ring-inset.focus:ring-indigo-500(data-action="click->toggle#show touch->toggle#show" aria-expanded="false" type="button")
             span.sr-only = _("Ouvrir le menu principal")
             /! Heroicon name: outline/bars-3
             svg.h-6.w-6 aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" viewbox=("0 0 24 24") xmlns="http://www.w3.org/2000/svg"
@@ -20,7 +20,7 @@ div
       span.mr-6.inline-flex.rounded-md.shadow-md.ring-1.ring-black.ring-opacity-5
         a.inline-flex.items-center.rounded-md.border.border-transparent.bg-white.px-4.py-2.text-base.font-medium.text-indigo-600.hover:bg-gray-50 href="https://wiki.semisto.org" = _("Wiki 📚")
       span.inline-flex.rounded-md.shadow-md.ring-1.ring-black.ring-opacity-5
-        a.inline-flex.items-center.rounded-md.border.border-transparent.bg-white.px-4.py-2.text-base.font-medium.text-indigo-600.hover:bg-gray-50 href="https://wiki.semisto.org/base-de-donnees" = _("Base de données 🌱")
+        a.inline-flex.items-center.rounded-md.border.border-transparent.bg-white.px-4.py-2.text-base.font-medium.text-indigo-600.hover:bg-gray-50 href="https://plantes.semisto.org" = _("Base de données 🌱")
   /!
     | Mobile menu, show/hide based on menu open state.
 
@@ -30,20 +30,26 @@ div
     | Leaving: "duration-100 ease-in"
     | From: "opacity-100 scale-100"
     | To: "opacity-0 scale-95"
-  .absolute.inset-x-0.top-0.z-10.origin-top-right.transform.p-2.transition.md:hidden
+  .absolute.inset-x-0.top-0.z-10.origin-top-right.transform.p-2.transition.bg-white.hidden(data-toggle-target="toggleable")
     .overflow-hidden.rounded-lg.shadow-md.ring-1.ring-black.ring-opacity-5
       .flex.items-center.justify-between.px-5.pt-4
         div
-          = image_tag "logo-s.png", class: "h-8 w-auto", alt: ""
+          = link_to root_path do
+            = image_tag "logo-s.png", class: "h-8 w-auto", alt: ""
         .-mr-2
-          button.inline-flex.items-center.justify-center.rounded-md.bg-white.p-2.text-gray-400.hover:bg-gray-100.hover:text-gray-500.focus:outline-none.focus:ring-2.focus:ring-inset.focus:ring-indigo-500 type="button"
+          button.inline-flex.items-center.justify-center.rounded-md.bg-white.p-2.text-gray-400.hover:bg-gray-100.hover:text-gray-500.focus:outline-none.focus:ring-2.focus:ring-inset.focus:ring-indigo-500(data-action="click->toggle#hide touch->toggle#hide" type="button")
             span.sr-only = _("Masquer le menu")
             /! Heroicon name: outline/x-mark
             svg.h-6.w-6 aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" viewbox=("0 0 24 24") xmlns="http://www.w3.org/2000/svg"
               path d=("M6 18L18 6M6 6l12 12") stroke-linecap="round" stroke-linejoin="round" /
       .space-y-1.px-2.pt-2.pb-3
-        = link_to _("Pôles"), "#", class: "block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-gray-900"
-        = link_to _("Wiki"), "#", class: "block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-gray-900"
-        = link_to _("À propos"), "#", class: "block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-gray-900"
-        = link_to _("Contact"), "#", class: "block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-gray-900"
-      a.block.w-full.bg-gray-50.px-5.py-3.text-center.font-medium.text-indigo-600.hover:bg-gray-100 href="#" = _("Me connecter")
+        = link_to _("Formations"), trainings_path, class: "block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-gray-900"
+        = link_to _("Bureau d'études"), design_path, class: "block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-gray-900"
+        = link_to _("Food Forest Heroes"), heroes_path, class: "block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-gray-900"
+        = link_to _("Chasseur de plants"), plants_hunter_path, class: "block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-gray-900"
+        = link_to _("Forêts comestibles"), food_forests_path, class: "block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-gray-900"
+        = link_to _("À propos"), about_path, class: "block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-gray-900"
+        = link_to _("Contact"), new_contact_path, class: "block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-gray-900"
+      .grid.grid-cols-2.divide-x
+        a.block.w-full.bg-gray-50.px-5.py-3.text-center.font-medium.text-indigo-600.hover:bg-gray-100 href="https://wiki.semisto.org" = _("Wiki 📚")
+        a.block.w-full.bg-gray-50.px-5.py-3.text-center.font-medium.text-indigo-600.hover:bg-gray-100 href="https://plantes.semisto.org" = _("Plantes 🌱")
